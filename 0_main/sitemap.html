@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>현대 오토에버 SRMS</title>
+    <!-- mata tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="Robots" content="ALL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common.css">
+</head>
+
+<body>
+
+    <div class="loading">
+        <div class="loading_mask_in"></div>
+    </div>
+
+    <div id="wrap">
+        <!-- header -->
+        <div class="header_wrap">
+            <!-- header_top -->
+            <div class="header_top">
+                <h1>
+                    <a href="main.html">
+                        <img src="../resources/images/main/SRMS_logo.png" alt="SRMS">
+                        <img src="../resources/images/main/SRMS_logo2.png" alt="SRMS">
+                    </a>
+                </h1>
+                <div class="customer">
+                    <div class="header_img">
+                        <a href=""><span class="bb">홍길동</span><span class="bb">매니저</span></a>
+                        <a href=""><span>기아자동차</span><span>보안관리1팀</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="header_time">
+                        <a href=""><span class="bb">20:22</span></a>
+                        <a href=""><span>로그인연장</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="main_bt_logout">로그아웃</div> 
+                    <span class="header_line"></span>
+                    <div class="language">
+                        <select class="we100">
+                            <option value="">한국어</option>
+                            <option value="">영어</option>
+                        </select>
+                    </div>   
+                </div>
+            </div>
+            <!-- header_menu -->
+            <div class="header_menu">
+                <ul class="menu">           
+                    <li class="level1"><a href=""><h2>결재 업무</h2></a></li>
+                    <li class="level1"><a href=""><h2>권한/자산 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>운영관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>보안 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>시스템 관리</h2></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 서브 컨텐츠 -->
+        <div class="content_wrap p40">
+            <!-- 테이블영역 -->
+            <table class="list_table_no_bg ">
+                <colgroup>
+                    <col style="width:8%">
+                    <col style="width:10%">
+                    <col style="width:15%">
+                    <col style="width:15%">
+                    <col style="width:18%">
+                    <col style="width:12%">
+                    <col style="width:auto">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>폴더명</th>
+                        <th>Depth1</th>
+                        <th>Depth2</th>
+                        <th>Depth3</th>
+                        <th>Depth4</th>
+                        <th>파일명</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 0_main  -->
+                    <tr>
+                        <td rowspan="12">0_main</td>
+                        <td rowspan="11">메인화면</td>
+                        <td>메인</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="main.html" target="blank">main.html</a></td>
+                        <td>업무 담당자 안내 팝업, 세로스크롤</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">공지사항</td>
+                        <td></td>
+                        <td>조회 (일반사용자화면)</td>
+                        <td><a href="notice_01.html" target="blank">notice_01.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>상세 (일반사용자화면) </td>
+                        <td><a href="notice_02.html" target="blank">notice_02.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>조회 및 등록 (보안팀+시스템운영자)</td>
+                        <td><a href="notice_03.html" target="blank">notice_03.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>등록 및 수정 (보안팀+시스템운영자)</td>
+                        <td><a href="notice_04.html" target="blank">notice_04.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">FAQ</td>
+                        <td></td>
+                        <td>조회 (일반사용자화면)</td>
+                        <td><a href="faq_01.html" target="blank">faq_01.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>상세 (일반사용자화면)</td>
+                        <td><a href="faq_02.html" target="blank">faq_02.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>조회 및 등록 (보안팀+시스템운영자)</td>
+                        <td><a href="faq_03.html" target="blank">faq_03.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>등록 및 수정 (보안팀+시스템운영자)</td>
+                        <td><a href="faq_04.html" target="blank">faq_04.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>업무담당자조회</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="main.html" target="blank">main.html</a></td>
+                        <td>푸터-업무 담당자 안내 팝업</td>
+                    </tr>
+                    <tr>
+                        <td>개인정보처리방침</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>에러페이지 템플릿</td>
+                        <td>에러페이지</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="error.html" target="blank">error.html</a></td>
+                        <td></td>
+                    </tr>
+                    <!-- 1_apply -->
+                    <tr>
+                        <td rowspan="12">1_apply</td>
+                        <td rowspan="12">권한신청</td>
+                        <td rowspan="9">1_1권한신청</td>
+                        <td rowspan="6">1. 권한정보 입력</td>
+                        <td>VPN계정신청</td>
+                        <td><a href="../1_apply/1_1_1_1_apply.html" target="blank">1_1_1_1_apply.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>웹격리</td>
+                        <td><a href="../1_apply/1_1_1_2_apply.html" target="blank">1_1_1_2_apply.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>서버접속</td>
+                        <td><a href="../1_apply/1_1_1_3_apply.html" target="blank">1_1_1_3_apply.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>DB접속</td>
+                        <td><a href="../1_apply/1_1_1_4_apply.html" target="blank">1_1_1_4_apply.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>무선사용</td>
+                        <td><a href="../1_apply/1_1_1_5_apply.html" target="blank">1_1_1_5_apply.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>보안프로그램 아이디 신청 (AD/DRM)</td>
+                        <td><a href="../1_apply/1_1_1_6_apply.html" target="blank">1_1_1_6_apply.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2. 사용자정보 입력</td>
+                        <td>사용자정보 입력</td>
+                        <td><a href="../1_apply/1_1_2_1_apply.html" target="blank">1_1_2_1_apply.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3. 조합 및 신청</td>
+                        <td>조합 및 신청</td>
+                        <td><a href="../1_apply/1_1_3_1_apply.html" target="blank">1_1_3_1_apply.html</a></td>
+                        <td>★★가로스크롤 세로스크롤기준★★</td>
+                    </tr>
+                    <tr>
+                        <td>★권한신청 레이어팝업 모음</td>
+                        <td></td>
+                        <td><a href="../1_apply/1_apply_layerpopup.html" target="blank">1_apply_layerpopup.html</a></td>
+                        <td>
+                            <p>접속시스템 선택 팝업</p>
+                            <p>VPN 접속시스템 조회 팝업</p>
+                            <p>보안 리스크 안내 팝업</p>
+                            <p>예외 S/W 팝업</p>
+                            <p>DB 서버 조회 팝업</p>
+                            <p>템플릿 가져오기 팝업</p>
+                            <p>AP 정보 조회 팝업</p>
+                            <p>직원검색 팝업</p>
+                            <p>협력사인원 검색 팝업</p>
+                            <p>방화벽 - ITSM 등록 서버 조회, 담당서버리스트 조회 팝업</p>
+                            <p>방화벽 - 사용자 검색 팝업</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">1_2방화벽신청</td>                        
+                        <td>OA 방화벽오픈 (협력사OA, VDI)</td>
+                        <td></td>
+                        <td><a href="../1_apply/1_2_1_apply_OA.html" target="blank">1_2_1_apply_OA.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>생산망 방화벽 통신 오픈 (MES망, 직서열, 방산망)</td>
+                        <td></td>
+                        <td><a href="../1_apply/1_2_2_apply_MES.html" target="blank">1_2_2_apply_MES.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>IDC 방화벽 오픈(서버팜, 인터넷, 해외망, 대외망)</td>
+                        <td></td>
+                        <td><a href="../1_apply/1_2_3_apply_IDC.html" target="blank">1_2_3_apply_IDC.html</a></td>
+                        <td></td>
+                    </tr>                    
+
+                    <!-- 2_approval -->
+                    <tr>
+                        <td rowspan="13">2_approval</td>
+                        <td rowspan="13">결재업무</td>
+                        <td rowspan="6">2_1 개인전자결재함</td>
+                        <td rowspan="2">결재할 문서</td>
+                        <td>내가 결재할 문서 (일반사용자,보통 팀장사용)</td>
+                        <td><a href="../2_approval/2_1_1_1_approval.html" target="blank">2_1_1_1_approval.html</a></td>
+                        <td>결재 팝업 (종합)대결자 지정 팝업<br>레이어팝업시 배경 스크롤 고정</td>
+                    </tr>
+                    <tr>
+                        <td>내가 결재할 문서 (보안팀)</td>
+                        <td><a href="../2_approval/2_1_1_2_approval.html" target="blank">2_1_1_2_approval.html</a></td>
+                        <td>결재 팝업 (종합)<br>기각 사유 입력 팝업<br>메일보내기 팝업<br>결재선 변경 팝업<br>팝업 스크롤, 팝업 타이틀 버튼</td>
+                    </tr>
+                    <tr>
+                        <td>작성중 문서</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_1_2_approval.html" target="blank">2_1_2_approval.html</a></td>
+                        <td></td>
+                    </tr>   
+                    <tr>
+                        <td>결재 진행중 문서</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_1_3_approval.html" target="blank">2_1_3_approval.html</a></td>
+                        <td>선조치 사유 입력 팝업<br>테이블안 버튼</td>
+                    </tr>
+                    <tr>
+                        <td>결재 완료 문서 (신청자)</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_1_4_approval.html" target="blank">2_1_4_approval.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>결재 완료 문서 (결재자)</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_1_5_approval.html" target="blank">2_1_5_approval.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">2_2 부서 전자 결재함</td>
+                        <td>부서 수신 진행함</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_2_1_approval.html" target="blank">2_2_1_approval.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>부서 수신 완료함</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_2_2_approval.html" target="blank">2_2_2_approval.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>부서 발신 진행함</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_2_3_approval.html" target="blank">2_2_3_approval.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>부서 발신 완료함</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_2_4_approval.html" target="blank">2_2_4_approval.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2_3 신청이력 조회</td>
+                        <td>신청이력 조회</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_3_1_approval.html" target="blank">2_3_1_approval.html</a></td>
+                        <td>탭<br>신청이력 상세 화면 팝업 윈도우</td>
+                    </tr>
+                    <tr>
+                        <td>신청이력 상세 화면 팝업</td>
+                        <td></td>
+                        <td><a href="../2_approval/2_3_popup_approval.html" target="blank">2_3_popup_approval.html</a></td>
+                        <td>탭, 가로스크롤</td>
+                    </tr>
+                    <tr>
+                        <td>통합 윈도우 팝업</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../2_approval/2_popup_approval.html" target="blank">2_popup_approval.html</a></td>
+                        <td>★종합 탭, 권한 탭(결재라인)<br>결재 의견 등록 팝업<br>코멘트 팝업<br><span class="req_star">*</span>정보1</td>
+                    </tr>
+
+                    <!-- 3_asset -->
+                    <tr>
+                        <td rowspan="13">3_asset</td>
+                        <td rowspan="13">권한/자산 관리</td>
+                        <td rowspan="4">3_1 부서정보관리</td>
+                        <td>부서인원관리</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_1_1_asset.html" target="blank">3_1_1_asset.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>부서 전산장비 관리</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_1_2_asset.html" target="blank">3_1_2_asset.html</a></td>
+                        <td>테이블 인풋데이터, 행추가</td>
+                    </tr>
+                    <tr>
+                        <td>부서 USB 관리</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_1_3_asset.html" target="blank">3_1_3_asset.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>담당서버관리</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_1_4_asset.html" target="blank">3_1_4_asset.html</a></td>
+                        <td>담당 서버 등록 팝업<br>레이어 팝업 안에 탭</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">3_2 협력사 정보 관리</td>
+                        <td>협력사 인원 관리</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_2_1_asset.html" target="blank">3_2_1_asset.html</a></td>
+                        <td>관리자 이관 팝업<br>가로스크롤, 테이블인풋</td>
+                    </tr>
+                    <tr>
+                        <td>협력사 자산 관리</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_2_2_asset.html" target="blank">3_2_2_asset.html</a></td>
+                        <td>협력사 장비 등록 팝업</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="7">3_3 권한 관리</td>
+                        <td>개인 보유 권한 현황</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_3_1_popup_asset.html" target="blank">3_3_1_popup_asset.html</a></td>
+                        <td>탭, 가로스크롤, 세로스크롤<br>연장 요청 사유 입력 팝업<br>권한 유지 필요 사유 입력 팝업</td>
+                    </tr>
+                    <tr>
+                        <td>부서원 보유 권한 현황</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_3_2_asset.html" target="blank">3_3_2_asset.html</a></td>
+                        <td>세로스크롤<br>5_2_security.html같음</td>
+                    </tr>
+                    <tr>
+                        <td>협력사 보유 권한 현황</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_3_3_popup_asset.html" target="blank">3_3_3_popup_asset.html</a></td>
+                        <td>탭, 가로스크롤, 세로스크롤<br>연장 요청 사유 입력 팝업<br>권한 유지 필요 사유 입력 팝업</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">권한 그룹 관리</td>
+                        <td>권한 그룹 관리 목록</td>
+                        <td><a href="../3_asset/3_3_4_1_asset.html" target="blank">3_3_4_1_asset.html</a></td>
+                        <td>권한 템플릿 공유하기 팝업</td>
+                    </tr>
+                    <tr>
+                        <td>권한 그룹 관리 상세화면</td>
+                        <td><a href="../3_asset/3_3_4_2_asset.html" target="blank">3_3_4_2_asset.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>보유 권한 적정성 검토이력 관리</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_3_5_asset.html" target="blank">3_3_5_asset.html</a></td>
+                        <td>보안팀 검토의견 입력 팝업<br>5_5_security.html와 같음</td>
+                    </tr>
+                    <tr>
+                        <td>보유 권한 적정성 검토이력 관리 상세화면 팝업</td>
+                        <td></td>
+                        <td><a href="../3_asset/3_3_5_popup_asset.html" target="blank">3_3_5_popup_asset.html</a></td>
+                        <td>5_5_popup_security.html와 같음</td>
+                    </tr>
+                    <!-- 4_manage -->
+                    <tr>
+                        <td rowspan="15" >4_manage</td>
+                        <td rowspan="15" >운영관리</td>
+                        <td rowspan="2">4_1 적용대기목록</td>
+                        <td>적용 대기 목록</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_1_manage.html" target="blank">4_1_manage.html</a></td>
+                        <td>권한명 탭, 적용 불가 팝업, 적용 불필요 팝업, 적용 상세 화면 팝업 윈도우</td>
+                    </tr>
+                    <tr>
+                        <td>적용 상세 화면 팝업</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_1_popup_manage.html" target="blank">4_1_popup_manage.html</a></td>
+                        <td>왼쪽 운영팀 오른쪽 의견 </td>
+                    </tr>
+                    <tr>
+                        <td>4_2 확인요청 목록</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../4_manage/4_2_manage.html" target="blank">4_2_manage.html</a></td>
+                        <td>권한명 탭, 확인 요청 팝업(신청자), 확인 완료 팝업(운영자)</td>
+                    </tr>
+                    <tr>
+                        <td>4_3 권한 회수 대기 목록</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../4_manage/4_3_manage.html" target="blank">4_3_manage.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4_4 권한 적용/회수 이력 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../4_manage/4_4_manage.html" target="blank">4_4_manage.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">4_5 NAC</td>
+                        <td>지역별 정책서버 관리(NAC)</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_5_1_manage.html" target="blank">4_5_1_manage.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>IP대역별 정책서버 관리 (NAC)</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_5_2_manage.html" target="blank">4_5_2_manage.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">4_6 Autopass</td>
+                        <td>Autopass 계정관리</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_6_1_manage.html" target="blank">4_6_1_manage.html</a></td>
+                        <td>상세 정보 조회 영역</td>
+                    </tr>
+                    <tr>
+                        <td>Autopass 접속시스템 관리</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_6_2_manage.html" target="blank">4_6_2_manage.html</a></td>
+                        <td>테이블 인풋데이터, 행추가</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">4_7 VPN</td>
+                        <td>VPN 정책그룹 관리</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_7_1_manage.html" target="blank">4_7_1_manage.html</a></td>
+                        <td>테이블 인풋데이터, 행추가, 화면 분할</td>
+                    </tr>
+                    <tr>
+                        <td>VPN계정 관리</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_7_2_manage.html" target="blank">4_7_2_manage.html</a></td>
+                        <td>테이블 인풋데이터, 행추가, 가로스크롤</td>
+                    </tr>
+                    <tr>
+                        <td>4_8 SAC</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4_9 Dbsafer</td>
+                        <td>고객정보 DB 관리</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_9_manage.html" target="blank">4_9_manage.html</a></td>
+                        <td>테이블 인풋데이터, 행추가, 화면 분할(가로스크롤)</td>
+                    </tr>
+                    <tr>
+                        <td>4_10 방화벽</td>
+                        <td>사업장별 방화벽 담당자 관리</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_10_manage.html" target="blank">4_10_manage.html</a></td>
+                        <td>테이블 인풋데이터, 행추가, 화면 분할(세로스크롤)</td>
+                    </tr>
+                    <tr>
+                        <td>4_11 AP관리</td>
+                        <td>지역별 무선공유기(AP) 관리</td>
+                        <td></td>
+                        <td><a href="../4_manage/4_11_manage.html" target="blank">4_11_manage.html</a></td>
+                        <td>테이블 인풋데이터, 행추가</td>
+                    </tr>
+                    <!-- 5_security -->
+                    <tr>
+                        <td rowspan="8">5_security</td>
+                        <td rowspan="8">보안관리</td>
+                        <td>5_1 신청이력 조회</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../5_security/5_1_security.html" target="blank">5_1_security.html</a></td>
+                        <td>2_3_1_approval 같고 엑셀 다운로드 버튼만 추가</td>
+                    </tr>
+                    <tr>
+                        <td>5_2 보유 권한 현황</td>
+                        <td></td>
+                        <td></td>                        
+                        <td><a href="../5_security/5_2_security.html" target="blank">5_2_security.html</a></td>
+                        <td>세로스크롤<br>3_3_2_asset.html 같음</td>
+                    </tr>
+                    <tr>
+                        <td>5_3 전보/퇴사자 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../5_security/5_3_security.html" target="blank">5_3_security.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5_4 권한별 보안리스크 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../5_security/5_4_security.html" target="blank">5_4_security.html</a></td>
+                        <td>테이블인풋, 테이블textarea</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">5_5 보유 권한 적정성 검토이력 관리</td>
+                        <td>보유 권한 적정성 검토이력 관리</td>
+                        <td></td>
+                        <td><a href="../5_security/5_5_security.html" target="blank">5_5_security.html</a></td>
+                        <td>보안팀 검토의견 입력 팝업<br>3_3_5_asset.html와 같음</td>
+                    </tr>
+                    <tr>
+                        <td>보유 권한 적정성 검토이력 관리 상세화면 팝업</td>
+                        <td></td>
+                        <td><a href="../5_security/5_5_popup_security.html" target="blank">5_5_popup_security.html</a></td>
+                        <td>3_3_5_popup_asset.html와 같음 </td>
+                    </tr>
+                    <tr>
+                        <td>5_6 신청사유 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../5_security/5_6_security.html" target="blank">5_6_security.html</a></td>
+                        <td>신청사유textarea show</td>
+                    </tr>
+                    <tr>
+                        <td>5_7 보안성검토 대상 협력사 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../5_security/5_7_security.html" target="blank">5_7_security.html</a></td>
+                        <td>왼쪽 오른쪽 영역 표</td>
+                    </tr>                 
+
+                    <!-- 6_system -->
+                    <tr>
+                        <td rowspan="16">6_system</td>
+                        <td rowspan="16">시스템관리</td>
+                        <td>6_1 솔루션별 운영자 관리</td>
+                        <td>솔루션별 운영자 관리</td>
+                        <td></td>
+                        <td><a href="../6_system/6_1_system.html" target="blank">6_1_system.html</a></td>
+                        <td>화면 분할</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">6_2 공지사항 관리</td>
+                        <td></td>
+                        <td>조회 및 등록 (보안팀+시스템운영자)</td>
+                        <td><a href="../6_system/6_2_1_system.html" target="blank">6_2_1_system.html</a></td>
+                        <td>notice_03.html와 같음</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>등록 및 수정 (보안팀+시스템운영자)</td>
+                        <td><a href="../6_system/6_2_2_system.html" target="blank">6_2_2_system.html</a></td>
+                        <td>notice_04.html와 같음</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">6_3 FAQ 관리</td>
+                        <td></td>
+                        <td>조회 및 등록 (보안팀+시스템운영자)</td>
+                        <td><a href="../6_system/6_3_1_system.html" target="blank">6_3_1_system.html</a></td>
+                        <td>faq_03.html와 같음</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>등록 및 수정 (보안팀+시스템운영자)</td>
+                        <td><a href="../6_system/6_3_2_system.html" target="blank">6_3_2_system.html</a></td>
+                        <td>faq_04.html와 같음</td>
+                    </tr>
+                    <tr>
+                        <td>6_4 결재선 관리</td>
+                        <td>결재선 관리</td>
+                        <td></td>
+                        <td><a href="../6_system/6_4_system.html" target="blank">6_4_system.html</a></td>
+                        <td>화면 분할, 세로스크롤</td>
+                    </tr>
+                    <tr>
+                        <td>6_5 대결자 관리</td>
+                        <td>대결자 관리</td>
+                        <td></td>
+                        <td><a href="../6_system/6_5_system.html" target="blank">6_5_system.html</a></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6_6 사용자 권한관리</td>
+                        <td>사용자 권한관리</td>
+                        <td></td>
+                        <td><a href="../6_system/6_6_system.html" target="blank">6_6_system.html</a></td>
+                        <td>화면 분할, 세로스크롤</td>
+                    </tr>
+                    <tr>
+                        <td>6_7 메뉴관리</td>
+                        <td>메뉴관리</td>
+                        <td></td>
+                        <td><a href="../6_system/6_7_system.html" target="blank">6_7_system.html</a></td>
+                        <td>화면 분할, 세로스크롤, 테이블데이터 확장/축소</td>
+                    </tr>
+                    <tr>
+                        <td>6_8 메뉴별 접속 권한관리</td>
+                        <td>메뉴별 접속 권한관리</td>
+                        <td></td>
+                        <td><a href="../6_system/6_8_system.html" target="blank">6_8_system.html</a></td>
+                        <td>화면 분할, 세로스크롤</td>
+                    </tr>
+                    <tr>
+                        <td>6_9 공통코드 관리</td>
+                        <td>공통코드 관리</td>
+                        <td></td>
+                        <td><a href="../6_system/6_9_system.html" target="blank">6_9_system.html</a></td>
+                        <td>화면 분할, 세로스크롤, 테이블데이터 확장/축소</td>
+                    </tr>
+                    <tr>
+                        <td>6_10 배치로그 관리</td>
+                        <td>배치로그 관리</td>
+                        <td></td>
+                        <td><a href="../6_system/6_10_system.html" target="blank">6_10_system.html</a></td>
+                        <td>탭, 세로스크롤, 기간버튼</td>
+                    </tr>
+                    <tr>
+                        <td>6_11 메인화면 간편선택관리</td>
+                        <td>메인화면 간편선택관리</td>
+                        <td></td>
+                        <td><a href="../6_system/6_11_system.html" target="blank">6_11_system.html</a></td>
+                        <td>세로스크롤, ★메인화면 간편선택 등록팝업</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">6_12 배치결과 확인</td>
+                        <td>기초데이터</td>
+                        <td></td>
+                        <td><a href="../6_system/6_12_1_system.html" target="blank">6_12_1_system.html</a></td>
+                        <td>탭</td>
+                    </tr>
+                    <tr>
+                        <td>권한 적용</td>
+                        <td></td>
+                        <td><a href="../6_system/6_12_2_system.html" target="blank">6_12_2_system.html</a></td>
+                        <td>탭</td>
+                    </tr>
+                    <tr>
+                        <td>배치 권한 적용 상세 화면</td>
+                        <td></td>
+                        <td><a href="../6_system/6_12_popup_system.html" target="blank">6_12_popup_system.html</a></td>
+                        <td>탭</td>
+                    </tr>
+
+                    <!-- SRMS_mail -->
+                    <tr>
+                        <td>SRMS_mail</td>
+                        <td>메일 템플릿</td>
+                        <td>mail_templete_승인</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../SRMS_mail/mail_templete_승인.html" target="blank">mail_templete_승인.html</td>
+                        <td></td>
+                    </tr>
+                    <!-- SRMS_O365 -->
+                    <tr>
+                        <td rowspan="2">SRMS_O365</td>
+                        <td rowspan="2">SRMS_O365</td>
+                        <td>O365 정책 적용/회수 이력 조회</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../SRMS_O365/O365_AR.html" target="blank">O365_AR.html</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>유해차단 O365 I/F 관리</td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="../SRMS_O365/O365_IF.html" target="blank">O365_If.html</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 서브 컨텐츠 끝 -->
+
+        <!-- footer -->
+        <div class="footer_wrap">
+            <div class="footer_logo">
+                <a href="main.html"><img src="../resources/images/main/hyundai.jpg" alt="HYUNDAI"></a>
+            </div>
+            <div class="footer_menu">
+                <p>
+                    <span><a href="">공지사항</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">FAQ</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">담당자 안내 및 문의</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">개인정보 처리방침</a></span>        
+                </p>
+                <p class="copyright">COPYRIGHT © 2021 HYUNDAI MOTOR GROUP. ALL RIGHTS RESERVED.</p>    
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+    <script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="../resources/js/printThis.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+</body>
+</html>

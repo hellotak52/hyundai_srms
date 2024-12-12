@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script type="text/javascript">
+
+//popup1
+function fn_popUp(number){
+    $("#popup_mask" + number).show();
+    $("#popup" + number).show();
+}   
+
+//레이어 닫기 버튼 (각자 init에 들어감)
+function fn_close(number){
+    $("#popup_mask" + number).hide();
+    $("#popup" + number).hide();
+}
+</script>
+<title>현대 오토에버 SRMS</title>
+<!-- mata tag -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="Robots" content="ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common.css">
+</head>
+
+<body>
+    <div id="wrap_popup">
+        <!-- 컨텐츠 랩 -->
+        <div class="content_wrap">
+            <div class="popup_title_wrap">
+                <p class="popup_title">보유 권한 적정성 검토이력 관리 상세화면</p>
+                <a class="popup_close" id="popup_close" onClick="javascript:window.close()">
+                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                </a>
+            </div>
+            <!-- 서브 컨텐츠 -->
+            <div class="sub_content_w">
+                <div class="over_h">
+                    <!-- 버튼영역 -->
+                    <div class="fl_r">
+                        <div class="btn btn_color1 mr5" onclick="fn_popUp('1')">결재</div>
+                    </div>
+                    <!-- 버튼영역 끝 -->
+                </div>
+                <!-- 탭 wrap-->
+                <div class="tab_wrap mt10">
+                    <!-- 탭1-->
+                    <div class="sub_tab sub_tab2 tab_view1">
+                        <ul>
+                            <li class="on tab1_bt"><a>종합</a></li>
+                            <li class="tab2_bt"><a>시스템1</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2시스템2시스템2시스템2시스템2 </a></li>
+                            <li class="on tab1_bt"><a>종합</a></li>
+                            <li class="tab2_bt"><a>시스템1</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="on tab3_bt"><a>시스템2시스템2시스템2시스템2시스템2 </a></li>
+                            <li class="on tab1_bt"><a>종합</a></li>
+                            <li class="tab2_bt"><a>시스템1</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스a템2</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2시스템2시스템2시스템2시스템2 </a></li>
+                            <li class="on tab1_bt"><a>종합</a></li>
+                            <li class="tab2_bt"><a>시스템1</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2 시스템2</a></li>
+                            <li class="tab3_bt"><a>시스템2시스템2시스템2시스템2시스템2 </a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_box tab_view1 ">
+                        <!-- 목적, 해야할 일, 검토의견, 현황 -->
+                        <div class="over_h">
+                            <div class="  fl_l we48">
+                                <div class="sub_header"><p class="title">목적</p></div>
+                                <div class="tab_y_scroll he200 p20">
+                                    정보시스템의 중요 접속권한(서버 및 DB)의 보유자 현황을 확인하고 적절한 인원이 권한을 보유중인지 확인
+                                </div>
+                            </div>
+                            <div class="  fl_r we48 ">
+                                <div class="sub_header"><p class="title">해야할 일</p></div>    
+                                <div class="tab_y_scroll he200 p20">
+                                    <p class="f_web">1) 인사이동(전보,퇴직)이 되었으나 권한이 유지되고 있는 경우 권한 삭제 요청</p>
+                                    <p class="f_web">2) 부서 내 업무변경으로 인해 정보시스템 접근권한이 필요하지 않으나 권한이 유지되고 있는 경우 권한 삭제 요청</p>
+                                    <p>※ 정보통신망법 및 개인정보보호법, 외부감사법(내부회계관리제도)에서 내부통제활동의 일환으로 중요 접속권한의 적정성 검토를 수행해야한다고 명시하고있으며, 적절한 통제력을 가진 인원에 의해 검토되어야합니다. 또한 검토이력에 대한 제출을 요구하고있어 증적자료로 활용할 수 있음을 안내드립니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub_header mt30"><p class="title">검토의견</p></div>    
+                        <table class="list_table1">
+                            <tr>
+                                <td class="alignLeft">미입력</td>
+                            </tr>
+                        </table>
+                        <!-- 개인별 보안리스크 현황 -->
+                        <div class="sub_header mt30 cl_b"><p class="title">현황</p></div>    
+                        <table class="list_table_y">
+                            <colgroup>
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:15%;">
+                                <col style="width:17%;">
+                            </colgroup>
+                            <tr>
+                                <th>정보시스템코드</th>
+                                <th>시스템명</th>
+                                <th>관리부서</th>
+                                <th>관리자(정)</th>                                    
+                                <th>임직원</th>
+                                <th>협력사</th>
+                            </tr>
+                        </table>
+                        <div class="tab_y_scroll he300">
+                            <table class="list_table1" style="border: none;" >
+                                <colgroup>
+                                    <col style="width:15%;">
+                                    <col style="width:15%;">
+                                    <col style="width:15%;">
+                                    <col style="width:15%;">
+                                    <col style="width:15%;">
+                                    <col style="width:16%;">
+                                </colgroup>
+                                <tr>
+                                    <td>F1316</td>
+                                    <td>보안 권한 관리시스템</td>
+                                    <td>정보보안팀</td>
+                                    <td>홍길동</td>
+                                    <td>2건</td>
+                                    <td>3건</td>
+                                </tr>
+                                <tr>
+                                    <td>F1316</td>
+                                    <td>보안 권한 관리시스템</td>
+                                    <td>정보보안팀</td>
+                                    <td>홍길동</td>
+                                    <td>2건</td>
+                                    <td>3건</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 개인별 보안리스크 현황 끝 -->                   
+                    </div>
+                    <!-- 탭1  끝-->
+                    <!-- 탭2-->
+                    <div class="sub_tab tab_view2 dis_n">
+                        <ul>
+                            <li class=" tab1_bt"><a>종합</a></li>
+                            <li class="on tab2_bt"><a>시스템1</a></li>
+                            <li class="tab3_bt"><a>시스템2</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_box tab_view2 dis_n">
+                        <!-- 시스템명, 시스템 담당자-->
+                        <div class="over_h">
+                            <div class="fl_l we48">
+                                <div class="sub_header "><p class="title">시스템명</p></div>    
+                                <table class="list_table_no_bg">
+                                    <tr> <th>보안 권한 관리시스템</th> </tr>
+                                </table>
+                            </div>
+                            <div class="fl_r we48">
+                                <div class="sub_header "><p class="title">시스템 담당자</p></div>
+                                <table class="list_table_no_bg">
+                                    <tr> <th>000팀 홍길동 매니저</th> </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- 시스템명, 시스템 담당자 끝-->
+                        <!-- 서버 접속권한-->
+                        <div class="sub_header mt40">
+                            <p class="title_s fl_l">서버 접속권한</p>
+                            <div class="fl_r ">
+                                <div class="btn btn_delete mr5" onclick="">권한회수</div>
+                                <div class="btn btn_color1" onclick="">유지</div>
+                            </div> 
+                        </div>                           
+                        <table class="list_table_no_bg">
+                            <colgroup>
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                            </colgroup>
+                            <tr>
+                                <th>Hostname</th>
+                                <th>IP</th>
+                                <th>Port (통합제품으로 전환 후, Port는 필요없음)</th>
+                                <th>소속부서</th>                                    
+                                <th>사용자명</th>
+                                <th>AD계정</th>
+                                <th>상태</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <!-- 서버 접속권한 끝 --> 
+                        <!-- DB 접속권한-->
+                        <div class="sub_header mt40">
+                            <p class="title_s fl_l">DB 접속권한</p>
+                            <div class="fl_r ">
+                                <div class="btn btn_delete mr5" onclick="">권한회수</div>
+                                <div class="btn btn_color1" onclick="">유지</div>
+                            </div> 
+                        </div>    
+                        <table class="list_table_no_bg">
+                            <colgroup>
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                            </colgroup>
+                            <tr>
+                                <th>업무명</th>
+                                <th>DBGroup</th>
+                                <th>IP</th>
+                                <th>소속부서</th>                                    
+                                <th>사용자명</th>
+                                <th>AD계정</th>
+                                <th>상태</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <!-- DB 접속권한 끝 -->     
+                    </div>
+                    <!-- 탭2  끝-->
+                </div> 
+                <!-- 탭 wrap 끝 -->
+            </div>
+            <!-- 서브 컨텐츠 끝 -->
+        </div>
+        <!-- 컨텐츠 랩 끝 -->
+        <!-- 검토 결과 등록 팝업 -->
+        <div id="popup_mask1" class="popup_mask">
+            <div class="popup_mask_in"></div>
+            <div id="popup1" class="popup_window500">
+                <div class="modal-content">
+                    <div class="popup_title_wrap">
+                        <p class="popup_title">검토 결과 등록</p>
+                        <a class="popup_close" id="popup_close" href="javascript:fn_close('1');">
+                            <img alt="" src="../resources/images/pop_up/popup_close.png">
+                        </a>
+                    </div>
+                    <!-- popup_panel -->     
+                    <div class="popup_panel he400">
+                        <!-- ※ 유의사항 -->
+                        <div class="sub_title_wrap">
+                            <div class="sub_title fl_l">※ 유의사항</div>
+                        </div>
+                        <table class="list_table1">
+                            <tr>
+                                <th class="alignLeft">결재자 본인은 부서에서 관리중인 시스템의 중요 접속권한에 대해 검토하였으며 부적절한 인원이 접근권한을 가지지 않도록 확인하였습니다.</th>
+                            </tr>
+                        </table>
+                        <!-- ※ 유의사항  끝-->
+                        <!-- ※ 검토 결과 입력-->
+                        <div class="sub_title_wrap mt30">
+                            <div class="sub_title fl_l">※ 검토 결과 입력</div>
+                            <div class="byte">(<span>0</span>/400byte)</div>
+                        </div>
+                        <div class="textarea he120"> 
+                            <textarea placeholder="Input some text."></textarea>
+                        </div>
+                        <!-- ※ 검토 결과 입력  끝-->
+                        <div class="popbtns_bottom">
+                            <a href="" class="btn btn_color1 mr10">결재</a>
+                            <a href="javascript:fn_close('1');" class="btn btn_gray pop_close">취소</a>
+                        </div>
+                    </div>
+                    <!-- popup_panel 끝 -->
+                </div>
+            </div>
+        </div>
+        <!-- 검토 결과 등록 팝업 끝 -->       
+    </div>
+    <!-- js -->
+    <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+    <script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="../resources/js/printThis.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+</body>
+</html>

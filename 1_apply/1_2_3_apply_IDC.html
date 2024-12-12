@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>현대 오토에버 SRMS</title>
+    <!-- mata tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="Robots" content="ALL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <div class="header_wrap">
+            <!-- header_top -->
+            <div class="header_top">
+                <h1>
+                    <a href="../0_main/main.html">
+                        <img src="../resources/images/main/SRMS_logo.png" alt="SRMS">
+                        <img src="../resources/images/main/SRMS_logo2.png" alt="SRMS">
+                    </a>
+                </h1>
+                <div class="customer">
+                    <div class="header_img">
+                        <a href=""><span class="bb">홍길동</span><span class="bb">매니저</span></a>
+                        <a href=""><span>기아자동차</span><span>보안관리1팀</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="header_time">
+                        <a href=""><span class="bb">20:22</span></a>
+                        <a href=""><span>로그인연장</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="main_bt_logout">로그아웃</div> 
+                    <span class="header_line"></span>
+                    <div class="language">
+                        <select class="we100">
+                            <option value="">한국어</option>
+                            <option value="">영어</option>
+                        </select>
+                    </div>   
+                </div>
+            </div>
+            <!-- header_menu -->
+            <div class="header_menu">
+                <ul class="menu">           
+                    <li class="level1"><a href=""><h2>결재 업무</h2></a></li>
+                    <li class="level1"><a href=""><h2>권한/자산 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>운영관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>보안 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>시스템 관리</h2></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 컨텐츠 랩 -->
+        <div class="content_wrap">
+            <!-- 사이드 메뉴 -->
+            <div class="sidenav">
+                <h3>방화벽 신청</h3>
+                <div class="contact_us">
+                    <p>※ 문의처</p>
+                    <dl class="contact_dl">
+                        <dt>1) 의왕/파주 IDC 1) 의왕/파주 IDC</dt>
+                        <dd>(02-111-1111)</dd>
+                    </dl>
+                    <dl class="contact_dl">
+                        <dt>2) 광주 IDC</dt>
+                        <dd>(02-222-2222)</dd>
+                    </dl>
+                    <dl class="contact_dl">
+                        <dt>3) 해외망</dt>
+                        <dd>(02-222-2222)</dd>
+                    </dl>
+                </div>    
+            </div>
+            <!-- 사이드 메뉴 끝-->
+            <!-- 서브 컨텐츠 -->
+            <div class="sub_content">
+                <div class="sub_header">
+                    <p class="title fl_l">방화벽 신청 구분</p>
+                    <select class="fl_l we30 ml20 mt8 f_web">
+                        <option value="">OA방화벽 오픈 (협력사OA, VDI)</option>
+                        <option value="">생산망 방화벽 통신 오픈 (MES망, 직서열, 방산망)</option>
+                        <option value="" selected="selected">IDC 방화벽 오픈 (서버팜, 인터넷, 해외망, 대외망)</option>
+                    </select>
+                </div> 
+                <!-- 선택된 방화벽 -->
+                <div class="sub_apply_wrap">
+                    <div class="main_title fl_l mr20">IDC 방화벽 오픈 (서버팜, 인터넷, 해외망, 대외망) 신청</div>        
+                </div> 
+                <!-- 선택된 방화벽 끝 -->
+                <!-- 정보입력 apply_wrap1 -->
+                <div class="apply_wrap1">                        
+                    <!-- 사용목적/정보 입력-->
+                    <div class="sub_header_s">
+                        <p class="title_s fl_l">기본정보 입력</p>
+                    </div>
+                    <table class="list_table_no_bg">
+                        <colgroup>
+                            <col style="width:15%;">
+                            <col style="width:35%;">
+                            <col style="width:15%;">
+                            <col style="width:35%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>사용기간</th>
+                                <td colspan="3">
+                                    <div class="date_area we40">
+                                        <input type="text" id=""  value="" class="form_control1   input_date we47" readonly>
+                                        <span class="unit">~</span>
+                                        <input type="text" id=""  value="" class="form_control1   input_date we47" readonly>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>오픈 목적</th>
+                                <td colspan="3">
+                                    <select class="we20 fl_l">
+                                        <option value="" selected="">선택</option>
+                                        <option value=""></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>신청사유</th>
+                                <td colspan="5"><div class="textarea he100"><textarea placeholder=""></textarea></div></td>       
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 사용목적/정보 입력 끝-->
+                    <!-- 출발지 정보 입력 -->
+                    <div class="sub_header_s mt50 ">
+                        <p class="title_s fl_l">출발지 정보 입력</p>
+                        <select class="we10 ml20">
+                            <option value="" selected="">망 선택</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="over_h ">           
+                        <div class="fl_l">
+                            <div class="btn btn_color1 mr5">서버 검색(ITSM)</div>
+                            <div class="btn btn_color1 mr5">담당서버 검색</div>
+                            <div class="btn btn_color1 mr5">템플릿 가져오기</div> 
+                            <div class="btn btn_color1 mr5">사용자 검색</div>                          
+                        </div>
+                        <div class="fl_r">
+                            <div class="btn btn_gray mr5">신청이력 복사(출발지 정보)</div>
+                            <div class="btn btn_gray mr5">행 추가</div>                            
+                            <div class="btn btn_gray">선택 삭제</div>
+                        </div>
+                    </div>
+                    <div class="tab_y_scroll mt10"  style="border-bottom: none;">
+                        <table class="list_table_y">
+                            <colgroup>
+                                <col style="width:3%">
+                                <col style="width:20%">
+                                <col style="width:15%">
+                                <col style="width:20%">
+                                <col style="width:20%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>선택</th>
+                                    <th>시스템명(업무명)</th>
+                                    <th>IP구분</th>
+                                    <th>IP주소(수정가능)</th>
+                                    <th>Subnet Mask</th>
+                                    <th>기기 타입</th>
+                                    <th>위치</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="tab_y_scroll he300">
+                        <table class="list_table1 trhover" style="border: none;">
+                            <colgroup>
+                                <col style="width:3%">
+                                <col style="width:20%">
+                                <col style="width:15%">
+                                <col style="width:20%">
+                                <col style="width:20%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                    <td>
+                                        <select class="we100 fl_l">
+                                            <option value="" selected="">선택</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                    <td>
+                                        <select class="we100 fl_l">
+                                            <option value="" selected="">선택</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="we100 fl_l">
+                                            <option value="" selected="">선택</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="we100 fl_l">
+                                            <option value="" selected="">선택</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 출발지 정보 입력 끝-->
+                    <!-- 목적지 정보 입력 -->
+                    <div class="sub_header_s mt50 ">
+                        <p class="title_s fl_l">목적지 정보 입력</p>
+                        <select class="we10 ml20">
+                            <option value="" selected="">망 선택</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="over_h ">           
+                        <div class="fl_l">
+                            <div class="btn btn_color1 mr5">서버 검색(ITSM)</div>
+                            <div class="btn btn_color1 mr5">담당서버 검색</div>
+                            <div class="btn btn_color1 mr5">템플릿 가져오기</div> 
+                            <div class="btn btn_color1 mr5">사용자 검색</div>                          
+                        </div>
+                        <div class="fl_r">
+                            <div class="btn btn_gray mr5">신청이력 복사(목적지  정보)</div>
+                            <div class="btn btn_gray mr5">행 추가</div>                            
+                            <div class="btn btn_gray">선택 삭제</div>
+                        </div>
+                    </div> 
+                    <div class="tab_y_scroll mt10"  style="border-bottom: none;">
+                        <table class="list_table_y">
+                            <colgroup>
+                                <col style="width:3%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>선택</th>
+                                    <th>시스템명(업무명)</th>
+                                    <th>IP구분</th>
+                                    <th>IP주소(수정가능)</th>
+                                    <th>Subnet Mask</th>
+                                    <th>프로토콜</th>
+                                    <th>Port No.</th>
+                                    <th>위치</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="tab_y_scroll he300">
+                        <table class="list_table1 trhover" style="border: none;">
+                            <colgroup>
+                                <col style="width:3%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                    <td>
+                                        <select class="we100 fl_l">
+                                            <option value="" selected="">선택</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                    <td>
+                                        <select class="we100 fl_l">
+                                            <option value="" selected="">선택</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="we100 fl_l">
+                                            <option value="" selected="">선택</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                    <td>
+                                        <select class="we100 fl_l">
+                                            <option value="" selected="">선택</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                    <td>asd</td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 목적지 정보 입력 끝-->
+                    <div class="btn_b_wrap">
+                        <div class="btn_b btn_color2"><span class="apply_i_list">조합 담기</span></div>
+                    </div>
+                </div>
+                <!-- 정보입력 apply_wrap1 끝--> 
+                <!-- 정보입력 apply_wrap2 -->
+                <div class="apply_wrap2">
+                    <!-- 테이블영역 -->
+                    <div class="sub_header mt60 ">
+                        <p class="title_s fl_l">IDC 방화벽 신청 목록</p>
+                        <!-- 버튼영역 -->
+                        <div class="fl_r">
+                            <div class="btn btn_delete">선택삭제</div>
+                        </div>
+                        <!-- 버튼영역 끝 -->
+                    </div>
+                    <div class="tab_y_scroll"  style="border-bottom: none;">
+                        <table class="list_table_no_bg" style="border: none">
+                            <colgroup>
+                                <col style="width:3%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:6%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th colspan="3">기본정보</th>
+                                    <th colspan="4">출발지</th>
+                                    <th colspan="7">목적지</th>
+                                </tr>
+                                <tr>
+                                    <th class="ck_type1"><input type="checkbox" id=""></th>
+                                    <th>시작일</th>
+                                    <th>만료일</th>
+                                    <th>사용기간</th>
+                                    <th>망구분</th>
+                                    <th>IP구분</th>
+                                    <th>IP/Subnet</th>
+                                    <th>위치</th>	
+                                    <th>망구분</th>
+                                    <th>IP구분</th>
+                                    <th>IP/Subnet</th>
+                                    <th>프로토콜</th>
+                                    <th>Port No.</th>
+                                    <th>URL</th>
+                                    <th>위치</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="tab_y_scroll he400">
+                        <table class="list_table1 trhover" style="border: none;">
+                            <colgroup>
+                                <col style="width:3%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:7%">
+                                <col style="width:6%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>                     
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>                        
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 테이블영역 끝 -->
+                </div>
+                <!-- 정보입력 apply_wrap2 끝--> 
+                <!-- 버튼영역 -->
+                <div class="btn_b_wrap">
+                    <div class="btn_b btn_color1 mr10">상신</div>
+                </div>
+                <!-- 버튼영역 끝 -->
+            </div>
+            <!-- 서브 컨텐츠 끝 -->                            
+        </div>
+        <!-- 컨텐츠 랩 -->
+
+        <!-- footer -->
+        <div class="footer_wrap">
+            <div class="footer_logo">
+                <a href="main.html"><img src="../resources/images/main/hyundai.jpg" alt="HYUNDAI"></a>
+            </div>
+            <div class="footer_menu">
+                <p>
+                    <span><a href="">공지사항</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">FAQ</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">담당자 안내 및 문의</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">개인정보 처리방침</a></span>        
+                </p>
+                <p class="copyright">COPYRIGHT © 2021 HYUNDAI MOTOR GROUP. ALL RIGHTS RESERVED.</p>    
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+    <script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="../resources/js/printThis.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+</body>
+</html>

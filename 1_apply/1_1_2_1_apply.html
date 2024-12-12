@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>현대 오토에버 SRMS</title>
+    <!-- mata tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="Robots" content="ALL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <div class="header_wrap">
+            <!-- header_top -->
+            <div class="header_top">
+                <h1>
+                    <a href="../0_main/main.html">
+                        <img src="../resources/images/main/SRMS_logo.png" alt="SRMS">
+                        <img src="../resources/images/main/SRMS_logo2.png" alt="SRMS">
+                    </a>
+                </h1>
+                <div class="customer">
+                    <div class="header_img">
+                        <a href=""><span class="bb">홍길동</span><span class="bb">매니저</span></a>
+                        <a href=""><span>기아자동차</span><span>보안관리1팀</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="header_time">
+                        <a href=""><span class="bb">20:22</span></a>
+                        <a href=""><span>로그인연장</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="main_bt_logout">로그아웃</div> 
+                    <span class="header_line"></span>
+                    <div class="language">
+                        <select class="we100">
+                            <option value="">한국어</option>
+                            <option value="">영어</option>
+                        </select>
+                    </div>   
+                </div>
+            </div>
+            <!-- header_menu -->
+            <div class="header_menu">
+                <ul class="menu">           
+                    <li class="level1"><a href=""><h2>결재 업무</h2></a></li>
+                    <li class="level1"><a href=""><h2>권한/자산 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>운영관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>보안 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>시스템 관리</h2></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 컨텐츠 랩 -->
+        <div class="content_wrap">
+            <!-- 사이드 메뉴 -->
+            <div class="sidenav">
+                <h3>권한신청</h3>
+                <div class="step_box">                    
+                    <ul>
+                        <li>
+                            <p class="number">Step 01.</p>
+                            <p class="step_box_text">권한정보 입력</p>
+                        </li>
+                        <li class="on"><p class="number">Step 02.</p>
+                            <p class="step_box_text">사용자정보 입력</p>
+                        </li>
+                        <li>
+                            <p class="number">Step 03.</p>
+                            <p class="step_box_text">조합 및 신청</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 사이드 메뉴 끝-->
+            <!-- 서브 컨텐츠 -->
+            <div class="sub_content">
+                <div class="sub_header">
+                    <p class="title">Step 02. 사용자정보 입력<span class="help_tip"><img src="../resources/images/main/tip.png" alt="도움말" title="도움말"></span></p>
+                </div> 
+                <!-- 정보입력 apply_wrap1 -->
+                <div class="apply_wrap1">
+                    <!-- 기본정보 입력-->
+                    <div class="sub_header_s ">
+                        <p class="title_s fl_l">기본정보</p>
+                        <div class="ck_type2 fl_l ml20">
+                            <input type="radio" name="chk_info1"  id="ck1_1" checked="checked"/><label for="ck1_1">임직원 </label>
+                            <input type="radio" name="chk_info1"  id="ck1_2"/><label for="ck1_2">협력사</label>
+                        </div> 
+                    </div>        
+                    <table class="list_table_no_bg">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>이름</th>
+                                <td>
+                                    <div class="search_box"><input type="text" id=""  value="" class="form_control1 we100" ><a class="btn_search"></a></div>
+                                </td>
+                                <th>회사명</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>부서명</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                        <p class="fc22 f_web mt8">※ 협력사 인원 등록 화면에 등록된 인원만 조회됩니다. 협력사 인원 등록화면에 내용을 등록하고 조회하거나 팝업을 닫고 화면에서 직접 입력해주세요. </p>
+                    <!-- 기본정보 입력 끝-->
+                    <!-- 계정정보 입력-->
+                    <div class="sub_header_s mt30 ">
+                        <p class="title_s fl_l">계정정보</p>
+                    </div>        
+                    <table class="list_table_no_bg">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>AD 계정</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>Autopass 계정</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>VPN 계정</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 계정정보 입력 끝-->
+                    <!-- 개인정보 입력 -->
+                    <div class="sub_header_s mt30 ">
+                        <p class="title_s fl_l">개인정보</p>
+                    </div>   
+                    <table class="list_table_no_bg">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                        </colgroup>
+                        <tbody>                            
+                            <tr>
+                                <th>한글 성</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>한글 이름</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>영문 성</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>영문 이름</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                            </tr>
+                            <tr>
+                                <th>직급</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>근무지</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>전화번호</th>
+                                <td colspan="3">
+                                    <select class="we30 fl_l mr5">
+                                        <option value="" selected="">+82(대한민국)</option>
+                                        <option value=""></option>
+                                    </select>
+                                    <input id="" type="text" value="010" class="form_control1 we20 fl_l">
+                                    <span class="unit">-</span>
+                                    <input id="" type="text" value="1234" class="form_control1 we20 fl_l">
+                                    <span class="unit">-</span>
+                                    <input id="" type="text" value="1234" class="form_control1 we20 fl_l">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일</th>
+                                <td colspan="3"><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>                                                              
+                                <th>개인정보 제공동의서</th>
+                                <td colspan="3">
+                                    <input type="text" id=""  value="" class="form_control2  we70 fl_l" placeholder="">
+                                    <div class="btn_s btn_lightgray fl_l ml10 "><span class="down_i_all"></span>첨부</div>
+                                </td>
+                                <th colspan="4"></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 개인정보 입력 끝 -->
+                    <!-- 장비정보 입력 -->
+                    <div class="sub_header_s mt30 ">
+                        <p class="title_s fl_l">장비정보</p>
+                    </div>   
+                    <table class="list_table_no_bg">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                            <col style="width:10%;">
+                            <col style="width:20%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>PC IP</th>
+                                <td>
+                                    <select class="we30 fl_l">
+                                        <option value="" selected="">선택</option>
+                                    </select>
+                                    <div class="ck_type1 multi">
+                                        <input type="checkbox" id="ck1_1"><label for="ck1_1">선택1</label>
+                                        <input type="checkbox" id="ck1_1"><label for="ck1_1">선택1</label>
+                                    </div>
+                                </td>
+                                <th>PC 사용지역</th>
+                                <td class="ck_type1">
+                                    <input type="checkbox" id="ck1_1"><label for="ck1_1">선택1</label>
+                                    <input type="checkbox" id="ck1_1"><label for="ck1_1">선택1</label>
+                                </td>
+                                <th>PC MAC주소</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>PC 분류</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 장비정보 입력 끝 -->
+                    <!-- 버튼영역 -->
+                    <div class="btn_b_wrap">
+                        <div class="btn_b btn_color2 mr10"><span class="apply_i_list">목록 담기</span></div>
+                        <div class="btn_b btn_gray">취소</div>
+                    </div>
+                    <!-- 버튼영역 끝 -->
+                </div>
+                <!-- 정보입력 apply_wrap1 끝-->
+                <!-- 정보입력 apply_wrap2 -->
+                <div class="apply_wrap2">
+                    <!-- 목록영역-->
+                    <div class="sub_header mt60 ">
+                        <p class="title_s fl_l">사용자 목록</p>
+                        <div class="fl_r">
+                            <div class="btn btn_delete">선택삭제</div>
+                        </div>
+                    </div>
+                    <table class="list_table_y">
+                        <colgroup>
+                            <col style="width:3%">
+                            <col style="width:10%">
+                            <col style="width:10%">
+                            <col style="width:10%">
+                            <col style="width:10%">
+                            <col style="width:10%">
+                            <col style="width:11%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th class="ck_type1"><input type="checkbox" id=""></th>
+                                <th>구분</th>
+                                <th>회사명</th>
+                                <th>부서명</th>
+                                <th>직급</th>
+                                <th>이름</th>
+                                <th>HKMC AD계정</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="tab_y_scroll he400">
+                        <table class="list_table1 trhover" style="border: none;">
+                            <colgroup>
+                                <col style="width:3%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td>asda</td>
+                                    <td>asda</td>
+                                    <td>asda</td>
+                                    <td>asda</td>
+                                    <td>asda</td>
+                                    <td>asda</td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>                      
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>                        
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 목록영역 끝 -->
+                    <!-- 버튼영역 -->
+                    <div class="btn_b_wrap">
+                        <div class="btn_b btn_color1"><span class="apply_i_next">다음</span></div>
+                    </div>
+                    <!-- 버튼영역 끝 -->
+                </div>
+                <!-- 정보입력 apply_wrap2 끝-->
+            </div>
+            <!-- 서브 컨텐츠 끝 -->                            
+        </div>
+        <!-- 컨텐츠 랩 -->
+
+        <!-- footer -->
+        <div class="footer_wrap">
+            <div class="footer_logo">
+                <a href="main.html"><img src="../resources/images/main/hyundai.jpg" alt="HYUNDAI"></a>
+            </div>
+            <div class="footer_menu">
+                <p>
+                    <span><a href="">공지사항</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">FAQ</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">담당자 안내 및 문의</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">개인정보 처리방침</a></span>        
+                </p>
+                <p class="copyright">COPYRIGHT © 2021 HYUNDAI MOTOR GROUP. ALL RIGHTS RESERVED.</p>    
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+    <script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="../resources/js/printThis.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+</body>
+</html>

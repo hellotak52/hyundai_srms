@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script type="text/javascript">
+
+//popup1
+function fn_popUp(number){
+    $("#popup_mask" + number).show();
+    $("#popup" + number).show();
+}   
+
+//레이어 닫기 버튼 (각자 init에 들어감)
+function fn_close(number){
+    $("#popup_mask" + number).hide();
+    $("#popup" + number).hide();
+}
+</script>
+<title>현대 오토에버 SRMS</title>
+<!-- mata tag -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="Robots" content="ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <div class="header_wrap">
+            <!-- header_top -->
+            <div class="header_top">
+                <h1>
+                    <a href="../0_main/main.html">
+                        <img src="../resources/images/main/SRMS_logo.png" alt="SRMS">
+                        <img src="../resources/images/main/SRMS_logo2.png" alt="SRMS">
+                    </a>
+                </h1>
+                <div class="customer">
+                    <div class="header_img">
+                        <a href=""><span class="bb">홍길동</span><span class="bb">매니저</span></a>
+                        <a href=""><span>기아자동차</span><span>보안관리1팀</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="header_time">
+                        <a href=""><span class="bb">20:22</span></a>
+                        <a href=""><span>로그인연장</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="main_bt_logout">로그아웃</div> 
+                    <span class="header_line"></span>
+                    <div class="language">
+                        <select class="we100">
+                            <option value="">한국어</option>
+                            <option value="">영어</option>
+                        </select>
+                    </div>   
+                </div>
+            </div>
+            <!-- header_menu -->
+            <div class="header_menu">
+                <ul class="menu">           
+                    <li class="level1 active"><a href=""><h2>결재 업무</h2></a></li>
+                    <li class="level1"><a href=""><h2>권한/자산 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>운영관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>보안 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>시스템 관리</h2></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 컨텐츠 랩 -->
+        <div class="content_wrap">
+            <!-- 사이드 메뉴 -->
+            <div class="sidenav">
+                <div class="dropdown-btn"><span>개인 전자 결재함</span><span class="arrow"></span></div>
+                <div class="dropdown-container">
+                    <a href="#" class="active">결재할 문서</a>
+                    <a href="#">작성중 문서</a>
+                    <a href="#">결재 진행중 문서</a>
+                    <a href="#">결재 완료 문서 (신청자)</a>
+                    <a href="#">결재 완료 문서 (결재자)</a>
+                </div>
+                <div class="dropdown-btn"><span>부서 전자 결재함</span><span class="arrow"></span></div>
+                <div class="dropdown-container">
+                    <a href="#">부서 수신 진행함</a>
+                    <a href="#">부서 수신 완료함</a>
+                    <a href="#">부서 발신 진행함</a>
+                    <a href="#">부서 발신 완료함</a>               
+                </div>
+                <a href=""><span>신청이력 조회</span></a>
+            </div>
+            <!-- 사이드 메뉴 끝-->
+            <!-- 서브 컨텐츠 -->
+            <div class="sub_content">
+                <div class="sub_header"><p class="title">내가 결재할 문서</p></div>        
+                <!-- 조회조건 영역 -->
+                <table class="sub_sort_table">
+                    <colgroup>
+                        <col style="width:5%;">
+                        <col style="width:20%;">
+                        <col style="width:5%;">
+                        <col style="width:20%;">
+                        <col style="width:5%;">
+                        <col style="width:20%;">
+                        <col style="width:5%;">
+                        <col style="width:20%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>결재요청일</th>
+                            <td>
+                                <div class="date_area">
+                                    <input type="text" id=""  value="" class="form_control1   input_date we46" readonly>
+                                    <span class="unit">~</span>
+                                    <input type="text" id=""  value="" class="form_control1   input_date we46" readonly>
+                                </div>
+                            </td>
+                            <td colspan="2">
+                                <div class="btn_s btn_lightgray mr5">1주</div>
+                                <div class="btn_s btn_lightgray mr5">1개월</div>
+                                <div class="btn_s btn_lightgray mr5">3개월</div>
+                            </td>
+                            <th>신청권한</th>
+                            <td>
+                                <select class="we100">
+                                    <option value="" selected="">선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>결재번호</th>
+                            <td><input type="text" id=""  value="" class="form_control1  we100" placeholder="10자리입력"> </td> 
+                            <th>신청부서</th>
+                            <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""> </td>    
+                            <th>신청자</th>
+                            <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""> </td>            
+                        </tr>
+                        <tr>
+                            <td colspan="8"><div class="btn btn_gray fl_r">조회</div></td>      
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 조회조건 영역 끝 -->
+                <!-- 버튼영역 -->
+                <div class="fl_r mt30">
+                    <div class="btn btn_color1 mr5">승인</div>
+                    <div class="btn btn_delete mr5" onclick="fn_popUp('1')">기각</div>
+                    <div class="btn btn_color2 mr5" onclick="fn_popUp('2')">메일</div>
+                    <div class="btn btn_color2 mr5" onclick="fn_popUp('3')">결재선 변경</div>
+                </div>
+                <!-- 버튼영역 끝 -->
+                <!-- 테이블영역 -->
+                <table class="list_table1 mt10">
+                    <colgroup>
+                        <col style="width:5%">
+                        <col style="width:15%">
+                        <col style="width:12%">
+                        <col style="width:12%">
+                        <col style="width:12%">
+                        <col style="width:10%">
+                        <col style="width:15%">
+                        <col style="width:15%">
+                        <col style="width:10%">
+                        <col style="width:12%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="ck_type1"><input type="checkbox" id=""></th>
+                            <th>결재번호 (10자리)</th>
+                            <th>상세번호</th>
+                            <th>신청권한</th>
+                            <th>신청부서</th>
+                            <th>신청자</th>
+                            <th>신청일</th>
+                            <th>결재요청일시</th>
+                            <th>결재상태</th>
+                            <th>선조치여부</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                            <td class="text_line_hover" onClick="window.open('../2_approval/2_popup_approval.html','결재팝업','width=1300, height=800, toolbar=no, menubar=no, scrollbars=yes, resizable=yes');return false;">0123456789</td>
+                            <td>01</td>
+                            <td>AD임시계정</td>
+                            <td>정보보안2팀</td>
+                            <td>홍길동</td>
+                            <td>YYYY-MM-DD</td>
+                            <td>YYYY-MM-DD HH:MM</td>
+                            <td>진행중</td>
+                            <td>O</td>
+                        </tr>
+                        <tr>
+                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                            <td class="text_line_hover" onClick="window.open('../2_approval/2_popup_approval.html','결재팝업','width=1300, height=800, toolbar=no, menubar=no, scrollbars=yes, resizable=yes');return false;">0123456789</td>
+                            <td>01</td>
+                            <td>AD임시계정</td>
+                            <td>정보보안2팀</td>
+                            <td>홍길동</td>
+                            <td>YYYY-MM-DD</td>
+                            <td>YYYY-MM-DD HH:MM</td>
+                            <td>진행중</td>
+                            <td>O</td>
+                        </tr>
+                        <tr>
+                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                            <td class="text_line_hover" onClick="window.open('../2_approval/2_popup_approval.html','결재팝업','width=1300, height=800, toolbar=no, menubar=no, scrollbars=yes, resizable=yes');return false;">0123456789</td>
+                            <td>01</td>
+                            <td>AD임시계정</td>
+                            <td>정보보안2팀</td>
+                            <td>홍길동</td>
+                            <td>YYYY-MM-DD</td>
+                            <td>YYYY-MM-DD HH:MM</td>
+                            <td>진행중</td>
+                            <td>O</td>
+                        </tr>
+                        <tr>
+                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>                        
+                    </tbody>
+                </table>
+                <!-- 테이블영역 끝 -->
+                <!-- 페이징  및  목록수-->
+                <div class="list_page">
+                    <a href="#" class="first"><span class="icon"></span></a>
+                    <a href="#" class="prev"><span class="icon"></span></a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a href="#" class="next"><span class="icon"></span></a>
+                    <a href="#" class="last"><span class="icon"></span></a>
+                    <select class="we_70 fl_l">
+                        <option value="" selected="">10</option>
+                        <option value="" >20</option>
+                        <option value="" >50</option>
+                        <option value="" >100</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 서브 컨텐츠 끝 -->
+        </div>
+        <!-- 컨텐츠 랩 끝 -->
+       
+
+        <!-- footer -->
+        <div class="footer_wrap">
+            <div class="footer_logo">
+                <a href="main.html"><img src="../resources/images/main/hyundai.jpg" alt="HYUNDAI"></a>
+            </div>
+            <div class="footer_menu">
+                <p>
+                    <span><a href="">공지사항</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">FAQ</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">담당자 안내 및 문의</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">개인정보 처리방침</a></span>        
+                </p>
+                <p class="copyright">COPYRIGHT © 2021 HYUNDAI MOTOR GROUP. ALL RIGHTS RESERVED.</p>    
+            </div>
+        </div>
+         <!-- 기각 사유 입력 팝업 -->
+        <div id="popup_mask1" class="popup_mask">
+            <div class="popup_mask_in"></div>
+            <div id="popup1" class="popup_window640">
+                <div class="modal-content">
+                    <div class="popup_title_wrap">
+                        <p class="popup_title">기각 사유 입력</p>
+                        <a class="popup_close" id="popup_close" href="javascript:fn_close('1');">
+                            <img alt="" src="../resources/images/pop_up/popup_close.png">
+                        </a>
+                    </div>
+                    <!-- popup_panel -->               
+                    <div class="popup_panel he500">
+                        <!-- 통보대상자 검색 -->
+                        <div class="sub_title_wrap">
+                            <div class="sub_title fl_l">통보대상자 검색</div>
+                        </div> 
+                        <table class="sub_sort_table">
+                            <colgroup>
+                                <col style="width:80px;">
+                                <col style="width:200px;">
+                                <col style="width:80px;">
+                                <col style="width:200px;">
+                                <col style="width:80px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>부서명</th>
+                                    <td><input type="text" id=""  value="부서1팀" class="form_control2  we100" readonly="부서1팀"></td>
+                                    <th>이름</th>
+                                    <td><input type="text" id=""  class="form_control1 we100"></td>
+                                    <td><div class="btn btn_gray mr5">조회</div></td>   
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="list_table_y">
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:40%">
+                                <col style="width:42%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="ck_type1"><input type="checkbox" id=""></th>
+                                    <th>부서명</th>
+                                    <th>이름</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="tab_y_scroll he200">
+                            <table class="list_table1 trhover" style="border:none;">
+                                <colgroup>
+                                    <col style="width:10%">
+                                    <col style="width:40%">
+                                    <col style="width:40%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td>머머머</td>
+                                        <td>머머머</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 통보대상자 검색 끝-->
+                        <div class="popbtns_bottom">
+                            <a href="" class="btn btn_color2">추가 ▼</a>
+                        </div>
+                        <!-- 통보 대상자 입력 -->
+                        <div class="sub_title_wrap mt30">
+                            <div class="sub_title">통보대상자</div>  
+                        </div>
+                        <table class="list_table1">
+                            <colgroup>
+                                <col style="width:20%;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>대상자</th>
+                                    <td>
+                                        <span class="down_x f_web mr10">홍길동</span>
+                                        <span class="down_x f_web mr10">홍길동</span>
+                                        <span class="down_x f_web mr10">홍길동</span>
+                                    </td>  
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 통보 대상자 입력  끝-->
+                        <!-- 기각사유 -->
+                        <div class="sub_title_wrap mt30">
+                            <div class="sub_title fl_l">기각사유</div>
+                            <div class="byte">(<span>0</span>/400byte)</div>
+                        </div>
+                        <div class="textarea he100"><textarea value="" placeholder="기각사유를 적어주세요."></textarea></div>
+                        <!-- 기각사유  끝-->
+                        <!-- 기각 취소버튼 -->
+                        <div class="popbtns_bottom">
+                            <a href="" class="btn btn_color1 mr10">기각</a>
+                            <a href="javascript:fn_close('1');" class="btn btn_gray pop_close">취소</a>
+                        </div>
+                        <!-- 기각 취소버튼 끝-->
+                    </div>
+                    <!-- popup_panel 끝 -->
+                </div>
+            </div>
+        </div>
+        <!-- 기각 사유 입력 팝업 끝 -->
+        <!-- 메일 보내기 팝업 -->
+        <div id="popup_mask2" class="popup_mask">
+            <div class="popup_mask_in"></div>
+            <div id="popup2" class="popup_window500">
+                <div class="modal-content">
+                    <div class="popup_title_wrap">
+                        <p class="popup_title">메일보내기</p>
+                        <a class="popup_close" id="popup_close" href="javascript:fn_close('2');">
+                            <img alt="" src="../resources/images/pop_up/popup_close.png">
+                        </a>
+                    </div>
+                    <!-- popup_panel -->     
+                    <div class="popup_panel he420">
+                        <!-- 의견입력 -->
+                        <div class="sub_title_wrap">
+                            <div class="sub_title fl_l">의견입력</div>
+                            <div class="byte">(<span>0</span>/400byte)</div>
+                        </div>
+                        <div class="textarea he200"> 
+                            <textarea placeholder="Input some text."></textarea>
+                        </div>
+                        <!-- 의견입력  끝-->
+                        <!-- 결재상태 변경  -->
+                        <table class="list_table1">
+                            <colgroup>
+                                <col style="width:20%">
+                                <col style="width:30%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>결재상태변경</th>
+                                    <td>
+                                        <select class="we100">
+                                            <option value="" selected="">보완요청</option>
+                                            <option value="" >보안검토</option>
+                                        </select>
+                                    </td>                              
+                                </tr>
+                            </thead>
+                        </table>
+                        <!-- 결재상태 변경 끝 -->
+                        <div class="popbtns_bottom">
+                            <a href="javascript:fn_popUp('2');" class="btn btn_color1 mr10">보내기</a>
+                            <a href="javascript:fn_close('2');" class="btn btn_gray pop_close">취소</a>
+                        </div>
+                    </div>
+                    <!-- popup_panel 끝 -->
+                </div>
+            </div>
+        </div>
+        <!-- 메일 보내기 팝업 끝 -->
+        <!-- 결재선 변경 팝업 -->
+        <div id="popup_mask3" class="popup_mask">
+            <div class="popup_mask_in"></div>
+            <div id="popup3" class="popup_window880">
+                <div class="modal-content">
+                    <div class="popup_title_wrap">
+                        <p class="popup_title">결재선 변경</p>
+                        <a class="popup_close" id="popup_close" href="javascript:fn_close('3');">
+                            <img alt="" src="../resources/images/pop_up/popup_close.png">
+                        </a>
+                    </div>
+                    <!-- popup_panel -->
+                    <div class="popup_panel he500">
+                        <!-- 대결자 검색 -->
+                        <div class="sub_title_wrap">
+                            <div class="sub_title fl_l">결재자 조회</div>
+                        </div>     
+                        <table class="sub_sort_table">
+                            <colgroup>
+                                <col style="width:80px;">
+                                <col style="width:200px;">
+                                <col style="width:80px;">
+                                <col style="width:200px;">
+                                <col style="width:80px;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>부서명</th>
+                                    <td>
+                                        <select class="we100 form_control1">
+                                            <option value="" selected="" >정보보안1팀</option>
+                                        </select>
+                                    </td>
+                                    <th>이름</th>
+                                    <td><input type="text" id=""  class="form_control1 we100"></td>
+                                    <td><div class="btn btn_gray">조회</div></td>   
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="list_table_y">
+                            <colgroup>
+                                <col style="width:3%;">
+                                <col style="width:14%;">
+                                <col style="width:14%;">
+                            </colgroup>
+                            <tr>
+                                <th>선택</th>
+                                <th>부서명</th>
+                                <th>이름</th>
+                            </tr>
+                        </table>
+                        <div class="tab_y_scroll he150">
+                            <table class="list_table1"  style="border: none;" >
+                                <colgroup>
+                                    <col style="width:3%;">
+                                    <col style="width:14%;">
+                                    <col style="width:14%;">
+                                </colgroup>
+                                <tr>
+                                    <td class="ck_type1"><input type="radio" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="radio" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="radio" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="radio" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="popbtns_bottom">
+                            <a href="" class="btn btn_color2">결재자 추가 ▼</a>
+                        </div>
+                        <!-- 대결자 검색 끝 -->
+                        <!-- 결재자 -->
+                        <div class="sub_title_wrap">
+                            <div class="sub_title fl_l">결재자 목록</div>
+                        </div>        
+                        <table class="list_table_y">
+                            <colgroup>
+                                <col style="width:8%">
+                                <col style="width:25%">
+                                <col style="width:25%">
+                                <col style="width:25%">
+                                <col style="width:17%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="ck_type1"><input type="checkbox" id=""></th>
+                                    <th>결재단계</th>
+                                    <th>부서명</th>
+                                    <th>이름</th>
+                                    <th>제외 및 삭제</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="tab_y_scroll he150">
+                            <table class="list_table1"  style="border: none;" >
+                                <colgroup>
+                                    <col style="width:8%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:25%">
+                                    <col style="width:15%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td>
+                                            <select class="we100 form_control2">
+                                                <option value="" selected="" >정보보안1팀</option>
+                                            </select>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><div class="btn_s btn_lightgray">제외</div></td> 
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td>
+                                            <select class="we100" readonly>
+                                                <option value="" selected="">정보보안1팀</option>
+                                            </select>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><div class="btn_s btn_lightgray">삭제</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td>
+                                            <select class="we100">
+                                                <option value="" selected="">정보보안1팀</option>
+                                            </select>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><div class="btn_s btn_lightgray">삭제</div></td>
+                                    </tr>     
+                                    <tr>
+                                        <td class="ck_type1"><input type="checkbox" id=""></td>
+                                        <td>
+                                            <select class="we100">
+                                                <option value="" selected="">정보보안1팀</option>
+                                            </select>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><div class="btn_s btn_lightgray">삭제</div></td>
+                                    </tr>                                 
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 결재자 끝 -->                        
+
+                        <div class="popbtns_bottom">
+                            <a href="" class="btn btn_color1 mr10">저장</a>
+                            <a href="javascript:fn_close('3');" class="btn btn_gray pop_close">닫기</a>
+                        </div>
+                    </div>
+                    <!-- popup_panel 끝-->                    
+                </div>
+            </div>
+        </div>
+        <!-- 결재선 변경 팝업 끝 -->
+    </div>
+</div>
+<!-- js -->
+<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+<script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+<script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="../resources/js/printThis.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+<script type="text/javascript" src="../resources/js/common.js"></script>
+</body>
+</html>

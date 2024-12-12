@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>현대 오토에버 SRMS</title>
+    <!-- mata tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="Robots" content="ALL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common_m.css">
+</head>
+<script type="text/javascript">
+//popup1
+function fn_popUp(number){
+    $("#popup_mask" + number).show();
+    $("#popup" + number).show();
+    $('body').addClass('scroll_dis').on('scroll touchmove', function(e){
+        e.preventDefault();
+    });
+}   
+
+//popup1 닫기 버튼 (각자 init에 들어감)
+function fn_close(number){
+    $("#popup_mask" + number).hide();
+    $("#popup" + number).hide();
+    $('body').removeClass('scroll_dis').off('scroll touchmove');
+}
+
+//menu
+function sidenav_open(){
+    $("#sidenav_mask").show();
+    $("#sidenav").show();
+    $('body').addClass('scroll_dis').on('scroll touchmove', function(e){
+        e.preventDefault();
+    });
+}   
+
+//menu 닫기 버튼 (각자 init에 들어감)
+function sidenav_close(){
+    $("#sidenav_mask").hide();
+    $("#sidenav").hide();
+    $('body').removeClass('scroll_dis').off('scroll touchmove');
+}
+</script>
+<body>
+    <div id="wrap">
+        <!-- header-->
+        <div class="header_top">
+            <h1 onclick="location.href='0_main.html'" ><img src="../resources/images/main/m_SRMS_logo.png" alt="SRMS"></h1>
+            <div class="menu" onclick="sidenav_open()"><img src="../resources/images/main/m_SRMS_menu.png" alt="menu"></div>
+        </div>
+        <!-- 사이드 메뉴 -->
+        <div id="sidenav_mask" class="sidenav_mask">
+            <div class="sidenav_mask_in"></div>
+            <div id="sidenav" class="sidenav_window">
+                <a class="sidenav_close" id="sidenav_close" href="javascript:sidenav_close();">
+                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                </a>
+                <div class="sidenav" >
+                    <h3 onclick="location.href='0_main.html'"><img src="../resources/images/main/m_SRMS_logo_w.png" alt="SRMS"> </h3>
+                    <div class="dropdown-btn"><span>권한 신청</span><span class="arrow"></span></div>
+                    <div class="dropdown-container">
+                        <a href="1_1_1_apply.html" class="">S/W VPN 신청</a>
+                        <a href="1_1_2_apply.html" class="">전산장비 네트워크 등록 (NAC)</a>
+                        <a href="1_1_3_apply.html" class="">보안프로그램 아이디 신청 (AD/DRM)</a>
+                    </div>
+                    <div class="dropdown-btn"><span>결재 업무</span><span class="arrow"></span></div>
+                    <div class="dropdown-container ">
+                        <a href="2_1_approval.html" class="">결재할 문서</a>
+                        <a href="2_2_approval.html" class="">결재 진행중 문서</a>
+                        <a href="2_3_approval.html" class="">결재 완료 문서</a>
+                    </div>
+                    <a href="3_1_notice.html" class=""><span>공지사항</span></a>
+                    <a href="4_1_faq.html" class="active"><span>FAQ</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- 사이드 메뉴 끝-->
+        <!-- 서브 컨텐츠 -->
+        <div class="sub_content">
+            <div class="sub_header">
+                <p class="title">FAQ</p>
+            </div>        
+            <!-- 조회조건 영역 -->
+            <table class="sub_sort_table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <select class="we100">
+                                <option value="" selected="">제목</option>
+                                <option value="" >내용</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id=""  value="" class="form_control1 we100">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="btn btn_gray fl_r">조회</div>                        
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 조회조건 영역 끝 -->
+            <!-- 테이블영역 -->
+                <ul class="list_table_m">
+                    <li onclick="location.href='4_2_faq.html'">
+                        <div class="num_box">1</div>
+                        <div class="info_box we80">
+                            <p><span class="type color1">현대</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="num_box">2</div>
+                        <div class="info_box">
+                            <p><span class="type color1">전사</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="num_box">3</div>
+                        <div class="info_box">
+                            <p><span class="type color1">연구소</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="num_box">4</div>
+                        <div class="info_box">
+                            <p><span class="type color1">기아</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li> 
+                    <li>
+                        <div class="num_box">5</div>
+                        <div class="info_box ">
+                            <p><span class="type color1">연구소</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="num_box">6</div>
+                        <div class="info_box">
+                            <p><span class="type color1">전사</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="num_box">7</div>
+                        <div class="info_box">
+                            <p><span class="type color1">현대</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="num_box">8</div>
+                        <div class="info_box">
+                            <p><span class="type color1">전사</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li> 
+                    <li>
+                        <div class="num_box">9</div>
+                        <div class="info_box ">
+                            <p><span class="type color1">기아</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="num_box">10</div>
+                        <div class="info_box">
+                            <p><span class="type color1">전사</span></p>
+                            <p><span class="title team wid1">권한신청방법 안내</span></p>
+                            <p><span class="content team wid1">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>                                    
+                            <p><span class="content">홍길동 매니저</span><span class="content">2021-03-02</span></p>
+                        </div>
+                    </li>
+                </ul>
+            <!--  테이블 끝 -->
+            <div class="list_page">
+                <a href="#" class="first"><span class="icon"></span></a>
+                <a href="#" class="prev"><span class="icon"></span></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next"><span class="icon"></span></a>
+                <a href="#" class="last"><span class="icon"></span></a>
+            </div>
+        </div>
+    </div>
+    <!-- 서브 컨텐츠 끝 -->
+
+    <!-- footer -->
+    <div class="footer_wrap">
+        <div class="footer_menu">
+            <div class="footer_logo">
+                <a href="0_main.html"><img src="../resources/images/main/hyundai.png" alt="HYUNDAI"></a>
+            </div>
+            <p>
+                <span><a href="">공지사항</a></span>
+                <span class="header_line"></span>
+                <span><a href="">FAQ</a></span>
+            </p>
+            <p class="mt10">
+                <span><a href="javascript:fn_popUp('1')">업무담당자 안내 및 문의 </a></span>
+                <span class="header_line"></span>
+                <span><a href="">개인정보 처리방침</a></span>        
+            </p>                
+            <p class="copyright">COPYRIGHT © 2021 HYUNDAI MOTOR GROUP.</p>    
+        </div>
+    </div>
+</div>
+<!-- js -->
+<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+<script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+<script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="../resources/js/printThis.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+<script type="text/javascript" src="../resources/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>현대 오토에버 SRMS</title>
+    <!-- mata tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="Robots" content="ALL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common_m.css">
+</head>
+<script type="text/javascript">
+//popup1
+function fn_popUp(number){
+    $("#popup_mask" + number).show();
+    $("#popup" + number).show();
+    $('body').addClass('scroll_dis').on('scroll touchmove', function(e){
+        e.preventDefault();
+    });
+}   
+
+//popup1 닫기 버튼 (각자 init에 들어감)
+function fn_close(number){
+    $("#popup_mask" + number).hide();
+    $("#popup" + number).hide();
+    $('body').removeClass('scroll_dis').off('scroll touchmove');
+}
+
+//menu
+function sidenav_open(){
+    $("#sidenav_mask").show();
+    $("#sidenav").show();
+    $('body').addClass('scroll_dis').on('scroll touchmove', function(e){
+        e.preventDefault();
+    });
+}   
+
+//menu 닫기 버튼 (각자 init에 들어감)
+function sidenav_close(){
+    $("#sidenav_mask").hide();
+    $("#sidenav").hide();
+    $('body').removeClass('scroll_dis').off('scroll touchmove');
+}
+</script>
+<body>
+    <div id="wrap">
+        <!-- header-->
+        <div class="header_top">
+            <h1 onclick="location.href='0_main.html'" ><img src="../resources/images/main/m_SRMS_logo.png" alt="SRMS"></h1>
+            <div class="menu" onclick="sidenav_open()"><img src="../resources/images/main/m_SRMS_menu.png" alt="menu"></div>
+        </div>
+        <!-- 사이드 메뉴 -->
+        <div id="sidenav_mask" class="sidenav_mask">
+            <div class="sidenav_mask_in"></div>
+            <div id="sidenav" class="sidenav_window">
+                <a class="sidenav_close" id="sidenav_close" href="javascript:sidenav_close();">
+                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                </a>
+                <div class="sidenav" >
+                    <h3 onclick="location.href='0_main.html'"><img src="../resources/images/main/m_SRMS_logo_w.png" alt="SRMS"> </h3>
+                    <div class="dropdown-btn"><span>권한 신청</span><span class="arrow"></span></div>
+                    <div class="dropdown-container">
+                        <a href="1_1_1_apply.html" class="">S/W VPN 신청</a>
+                        <a href="1_1_2_apply.html" class="">전산장비 네트워크 등록 (NAC)</a>
+                        <a href="1_1_3_apply.html" class="">보안프로그램 아이디 신청 (AD/DRM)</a>
+                    </div>
+                    <div class="dropdown-btn active"><span>결재 업무</span><span class="arrow"></span></div>
+                    <div class="dropdown-container " style="display: block;">
+                        <a href="2_1_approval.html" class="">결재할 문서</a>
+                        <a href="2_2_approval.html" class="active">결재 진행중 문서</a>
+                        <a href="2_3_approval.html" class="">결재 완료 문서</a>
+                    </div>
+                    <a href="3_1_notice.html" class=""><span>공지사항</span></a>
+                    <a href="4_1_faq.html" class=""><span>FAQ</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- 사이드 메뉴 끝-->
+        <!-- 서브 컨텐츠 -->
+        <div class="sub_content_w">
+            <div class="sub_header">
+                <div class="number">결재번호 : <span>1231231231</span></div>
+            </div>
+            <!-- 탭 wrap-->
+            <div class="tab_wrap"> 
+                <div class="m_approval">
+                 <select class="we100" onchange="if(this.value) location.href=(this.value);">
+                    <option value="2_approval_all.html" >종합</option>
+                    <option value="2_approval_each.html" selected="selected">권한1</option>
+                    <option value="2_approval_each.html" >권한2</option>
+                </select>
+            </div>
+            <div class="tab_box">
+                <!-- 접기 펼치기 내용 -->
+                <div class="show_hide_wrap">
+                    <div class="show_hide">
+                        <!-- 결재라인 -->
+                        <div class="sub_header ">
+                            <p class="title fl_l">결재라인</p>
+                        </div>
+                        <table class="list_table1">
+                            <tr>
+                                <th style="width:20%;">신청/보완</th>
+                                <td style="width:80%;">
+                                    <div class="approaval_line mar_auto">
+                                        <p class="label color1">신청</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="left_arrow "></div>
+                        <table class="list_table1">
+                            <tr>
+                                <th style="width:20%;">부서장</th>
+                                <td style="width:80%;">
+                                    <div class="approaval_line mar_auto">
+                                        <p class="label color1">승인</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="left_arrow "></div>
+                        <table class="list_table1">
+                            <tr>
+                                <th style="width:20%;">보안</th>
+                                <td style="width:80%;">
+                                    <div class="approaval_line mar_auto we45 fl_l">
+                                        <p class="label color2">검토중</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                    <div class="approaval_line mar_auto we45 fl_l">
+                                        <p class="label color1">승인</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                    <div class="approaval_line mar_auto we45 fl_l">
+                                        <p class="label color2">보완요청</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                    <div class="approaval_line mar_auto we45 fl_l">
+                                        <p class="label color3">기각</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="list_table1 mt30">
+                            <tr>
+                                <th style="width:20%;">협조처</th>
+                                <td style="width:80%;">
+                                    <div class="approaval_line mar_auto we45 mr5 fl_l">
+                                        <p class="label color2">검토중</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                    <div class="approaval_line mar_auto we45 mr5 fl_l">
+                                        <p class="label color1">승인</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                    <div class="approaval_line mar_auto we45 mr5 fl_l">
+                                        <p class="label color2">검토중</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                    <div class="approaval_line mar_auto we45 mr5 fl_l">
+                                        <p class="label color1">승인</p>
+                                        <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                        <p class="name">홍길동 매니저</p>
+                                        <p class="date ">2020.04.13 HH:MM</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <!-- 결재라인 끝 -->
+                        <!-- 운영팀 -->
+                        <div class="sub_header mt30 cl_b"><p class="title">운영팀</p></div>    
+                        <div class="textarea he100">
+                            <textarea readonly="readonly">적용문의: [정보보안팀 최길동 팀장] 010-0000-0000 </textarea>
+                        </div>
+                        <!-- 운영팀 끝 -->
+                    </div>
+                    <div class="show_hide_btn off">- 접기</div>
+                    <div class="show_hide_btn on dis_n">+ 펼치기</div>
+                </div> 
+                <!-- 접기 펼치기 내용 끝-->
+                <!-- 의견 -->
+                <div class="sub_header mt30 cl_b"><p class="title">의견</p></div>    
+                <div class="textarea he100">
+                    <textarea readonly="readonly">[정보보안팀 최길동 팀장 2020-11-20 15:42] : 이상없음을 확인하였습니다. </textarea>
+                </div>
+                <!-- 의견 끝 -->
+                <!-- 개인별 보안리스크 현황 -->
+                <div class="sub_header mt30 cl_b">
+                    <p class="title fl_l mt10">상세내역</p>
+                    <!-- 버튼영역 -->
+                    <div class="fl_r ">
+                        <div class="btn_s btn_delete mr5" onclick="">개별기각</div>
+                    </div>
+                    <!-- 버튼영역 끝 --> 
+                </div>
+                <!-- 테이블영역 -->
+                <ul class="list_table_m">
+                    <li style="border-top: none;" class="on">
+                        <div class="num_box">1</div>
+                        <div class="info_box we85">
+                            <p><span class="title">회사명</span><span class="content">현대자동차</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                            <p><span class="title">HKMC 계정</span><span class="content">AD계정</span></p>
+                            <p><span class="title">부서명/회사명</span><span class="content team wid2">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>
+                            <p>
+                                <span class="title">시작일</span><span class="content">2021-03-03</span>
+                                <span class="title">완료일</span><span class="content">2021-03-03</span>                                
+                            </p>
+                            <p>
+                                <span class="title">사용기간</span><span class="content">5</span>
+                                <span class="title">계정선택</span><span class="content">AD 외 DRM 모두신청</span>
+                                </p>
+                                <p>
+                                <span class="title">결재상태</span><span class="content">승인</span>
+                                <span class="title">적용상태</span><span class="content">미적용</span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="num_box">100</div>
+                        <div class="info_box we85">
+                            <p><span class="title">회사명</span><span class="content">현대자동차</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                            <p><span class="title">HKMC 계정</span><span class="content">AD계정</span></p>
+                            <p><span class="title">부서명/회사명</span><span class="content team wid2">구매시스템 정보보안 1팀 구매시스템 정보보안 1팀구매시스템 정보보안 1팀</span></p>
+                            <p>
+                                <span class="title">시작일</span><span class="content">2021-03-03</span>
+                                <span class="title">완료일</span><span class="content">2021-03-03</span>                                
+                            </p>
+                            <p>
+                                <span class="title">사용기간</span><span class="content">5</span>
+                                <span class="title">계정선택</span><span class="content">AD 외 DRM 모두신청</span>
+                                </p>
+                                <p>
+                                <span class="title">결재상태</span><span class="content">승인</span>
+                                <span class="title">적용상태</span><span class="content">미적용</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <!--  테이블 끝 -->
+                <!-- 페이징  및  목록수-->
+                <div class="list_page">
+                    <a href="#" class="first"><span class="icon"></span></a>
+                    <a href="#" class="prev"><span class="icon"></span></a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#" class="next"><span class="icon"></span></a>
+                    <a href="#" class="last"><span class="icon"></span></a>
+                </div>
+                <!-- 페이징  및  목록수 끝-->
+                <!-- 탭2  끝-->
+            </div>  
+            <!-- 탭 wrap 끝 -->
+        </div>
+    </div>
+    <!-- 컨텐츠 랩 끝 -->
+
+    <!-- 결재 의견 등록 팝업 -->
+    <div id="popup_mask1" class="popup_mask">
+        <div class="popup_mask_in"></div>
+        <div id="popup1" class="popup_window500">
+            <div class="modal-content">
+                <div class="popup_title_wrap">
+                    <p class="popup_title">결재 의견 등록</p>
+                    <a class="popup_close" id="popup_close" href="javascript:fn_close('1');">
+                        <img alt="" src="../resources/images/pop_up/popup_close.png">
+                    </a>
+                </div>
+                <!-- popup_panel -->     
+                <div class="popup_panel he400">
+                    <!-- ※ 유의사항 -->
+                    <div class="sub_title_wrap">
+                        <div class="sub_title fl_l">※ 유의사항</div>
+                    </div>
+                    <table class="list_table1">
+                        <tr>
+                            <th>결재 유의사항을 읽고 필요한 권한만을 신청함을 확인하였습니다.</th>
+                        </tr>
+                    </table>
+                    <!-- ※ 유의사항  끝-->
+                    <!-- ※ 검토 결과 입력-->
+                    <div class="sub_title_wrap mt30">
+                        <div class="sub_title fl_l">※ 검토 결과 입력</div>
+                        <div class="byte">(<span>0</span>/400byte)</div>
+                    </div>
+                    <div class="textarea he120"> 
+                        <textarea placeholder="Input some text."></textarea>
+                    </div>
+                    <!-- ※ 검토 결과 입력  끝-->
+                    <div class="popbtns_bottom">
+                        <a href="" class="btn btn_color1 mr10">결재</a>
+                        <a href="javascript:fn_close('1');" class="btn btn_gray pop_close">취소</a>
+                    </div>
+                </div>
+                <!-- popup_panel 끝 -->
+            </div>
+        </div>
+    </div>
+    <!-- 결재 의견 등록 팝업 끝 -->       
+    <!-- 코멘트 입력 팝업 -->
+    <div id="popup_mask3" class="popup_mask">
+        <div class="popup_mask_in"></div>
+        <div id="popup3" class="popup_window500">
+            <div class="modal-content">
+                <div class="popup_title_wrap">
+                    <p class="popup_title">코멘트 입력</p>
+                    <a class="popup_close" id="popup_close" href="javascript:fn_close('3');">
+                        <img alt="" src="../resources/images/pop_up/popup_close.png">
+                    </a>
+                </div>
+                <!-- popup_panel -->     
+                <div class="popup_panel he400">
+                    <!-- 의견입력 -->
+                    <div class="sub_title_wrap">
+                        <div class="sub_title fl_l">의견 입력</div>
+                        <div class="byte">(<span>0</span>/400byte)</div>
+                    </div>
+                    <div class="textarea he200"> 
+                        <textarea placeholder="Input some text."></textarea>
+                    </div>
+                    <!-- 의견입력  끝-->
+                    <!-- 결재상태 변경  -->
+                    <table class="list_table1">
+                        <colgroup>
+                            <col style="width:20%">
+                            <col style="width:30%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>결재상태변경</th>
+                                <td>
+                                    <select class="we100">
+                                        <option value="" selected="">보완요청</option>
+                                        <option value="" >보안검토</option>
+                                    </select>
+                                </td>                              
+                            </tr>
+                        </thead>
+                    </table>
+                    <!-- 대결자검색 -->
+                    <div class="popbtns_bottom">
+                        <a href="" class="btn btn_color2 mr10">메일</a>
+                        <a href="" class="btn btn_color1 mr10">등록</a>
+                        <a href="javascript:fn_close('3');" class="btn btn_gray pop_close">취소</a>
+                    </div>
+                </div>
+                <!-- popup_panel 끝 -->
+            </div>
+        </div>
+    </div>
+    <!-- 코멘트 입력 팝업 끝 -->
+    <!-- footer -->
+    <div class="footer_wrap">
+        <div class="footer_menu">
+            <div class="footer_logo">
+                <a href="0_main.html"><img src="../resources/images/main/hyundai.png" alt="HYUNDAI"></a>
+            </div>
+            <p>
+                <span><a href="">공지사항</a></span>
+                <span class="header_line"></span>
+                <span><a href="">FAQ</a></span>
+            </p>
+            <p class="mt10">
+                <span><a href="javascript:fn_popUp('1')">업무담당자 안내 및 문의 </a></span>
+                <span class="header_line"></span>
+                <span><a href="">개인정보 처리방침</a></span>        
+            </p>                
+            <p class="copyright">COPYRIGHT © 2021 HYUNDAI MOTOR GROUP.</p>    
+        </div>
+    </div>
+    <!-- footer end-->
+</div>
+<!-- js -->
+<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+<script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+<script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="../resources/js/printThis.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+<script type="text/javascript" src="../resources/js/common.js"></script>
+</body>
+</html>

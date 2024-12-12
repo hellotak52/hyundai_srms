@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script type="text/javascript">
+
+//popup1
+function fn_popUp(number){
+    $("#popup_mask" + number).show();
+    $("#popup" + number).show();
+}   
+
+//레이어 닫기 버튼 (각자 init에 들어감)
+function fn_close(number){
+    $("#popup_mask" + number).hide();
+    $("#popup" + number).hide();
+}
+</script>
+<title>현대 오토에버 SRMS</title>
+<!-- mata tag -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="Robots" content="ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common.css">
+</head>
+
+<body>
+    <div id="wrap_popup">
+        <!-- 컨텐츠 랩 -->
+        <div class="content_wrap">
+            <div class="popup_title_wrap">
+                <p class="popup_title">엑셀 업로드</p>
+                <a class="popup_close" id="popup_close" onClick="javascript:window.close()">
+                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                </a>
+            </div>
+            <!-- 서브 컨텐츠 -->
+            <div class="sub_content_w">
+                <!-- ※ 유의사항 -->
+                <div class="apply_wrap1" style="font-size: 16px; line-height: 28px; padding: 20px;">
+                    <div class="sub_header_s "><p class="title_s">※ 유의사항</p></div>
+                    <p>1) 엑셀업로드는 <span class="fc22 f_web">업로드 -> 오류체크 -> 저장 순서로 진행</span>됩니다.</p>
+                    <p>2) 신청항목별로 엑셀양식이 상이하므로 <span class="fc22 f_web">엑셀 상단의 신청권한 명을 확인</span>바랍니다.</p>
+                    <p>3) 잘못된 입력값으로 <span class="fc22 f_web">업로드가 안되는경우, 팝업 하단의 오류메세지를 확인</span>바랍니다.</p>
+                </div>
+                <!-- ※ 유의사항  끝-->
+                <!-- IDC 방화벽 오픈 엑셀 업로드  -->
+                <div class="sub_header mt40">
+                    <p class="title fl_l">IDC 방화벽 오픈 엑셀 업로드</p>
+                    <div class="fl_l mt8"><div class="btn btn_color2 ml10" onclick="">양식 다운로드</div></div>
+                </div>
+                <!-- 업로드, 보안서약서 파일찾기 -->
+                <table class="sub_sort_table">
+                    <colgroup>
+                        <col style="width:5%;">
+                        <col style="width:50%;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>업로드파일</th>
+                            <td><input type="text" id="" value="" class="form_control1  we100"></td>         
+                            <td>
+                                <div class="btn btn_lightgray mr5">파일찾기</div>
+                                <div class="btn btn_gray mr5">오류체크</div>
+                                <div class="btn btn_color1 mr5">저장</div>
+                            </td> 
+                        </tr>
+                        <tr>
+                            <th>보안서약서</th>
+                            <td><input type="text" id="" value="" class="form_control1  we100"></td>    
+                            <td>
+                                <div class="btn btn_lightgray mr5">파일찾기</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 업로드, 보안서약서 파일찾기 끝-->
+                <!-- 업로드 파일찾기 목록 -->
+                <div class="tab_x_scroll">
+                    <table class="list_table1" style="border: none;">
+                        <thead>
+                            <tr>
+                                <th style="width:40px;">No</th>
+                                <th style="width:150px;">설명</th>
+                                <th style="width:150px;">설명</th>
+                                <th style="width:150px;">설명</th>
+                                <th style="width:150px;">설명</th>
+                                <th style="width:150px;">설명설명설명</th>
+                                <th style="width:150px;">설명</th>
+                                <th style="width:150px;">설명</th>
+                                <th style="width:150px;">설명</th>
+                                <th style="width:150px;">설명</th>
+                                <th style="width:150px;">설명</th>
+                                <th style="width:150px;">설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 페이징  및  목록수-->
+                <div class="list_page">
+                    <a href="#" class="first"><span class="icon"></span></a>
+                    <a href="#" class="prev"><span class="icon"></span></a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">10</a>
+                    <a href="#" class="next"><span class="icon"></span></a>
+                    <a href="#" class="last"><span class="icon"></span></a>
+                    <select class="we_70 fl_l">
+                        <option value="" selected="">10</option>
+                        <option value="" >20</option>
+                        <option value="" >50</option>
+                        <option value="" >100</option>
+                    </select>
+                </div>
+                <!-- 업로드 파일찾기 목록 끝-->
+                <!-- 오류메세지 -->
+                <div class="sub_header mt50">
+                    <p class="title_s">오류메세지</p>
+                </div>
+                <div class="textarea he150">
+                    <textarea readonly="readonly">
+1번째 행의 IP구분 값의 형식이 잘못되었습니다. (IP구분 : 단일/대역/전체(Any))
+2번째 행의 방화벽 구분 값이 입력되지 않았습니다.
+3번째 행의 출발지IP의 형식이 잘못되었습니다. ( xxx.xxx.xxx.xxx, .으로 구분)
+…
+                    </textarea>
+                </div>
+                <!-- 오류메세지 끝 -->
+                <!-- IDC 방화벽 오픈 엑셀 업로드 끝 -->
+                <!-- 서브 컨텐츠 끝 -->
+            </div>
+            <!-- 컨텐츠 랩 끝 -->
+        </div>
+        <!-- js -->
+        <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+        <script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+        <script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+        <script type="text/javascript" src="../resources/js/printThis.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+        <script type="text/javascript" src="../resources/js/common.js"></script>
+    </body>
+    </html>

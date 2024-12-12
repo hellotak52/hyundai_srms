@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script type="text/javascript">
+
+//popup1
+function fn_popUp(number){
+    $("#popup_mask" + number).show();
+    $("#popup" + number).show();
+}   
+
+//레이어 닫기 버튼 (각자 init에 들어감)
+function fn_close(number){
+    $("#popup_mask" + number).hide();
+    $("#popup" + number).hide();
+}
+</script>
+<title>현대 오토에버 SRMS</title>
+<!-- mata tag -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="Robots" content="ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common.css">
+</head>
+
+<body>
+    <div id="wrap_popup">
+        <!-- 컨텐츠 랩 -->
+        <div class="content_wrap">
+            <div class="popup_title_wrap">
+                <p class="popup_title">결재 (종합)</p>
+                <a class="popup_close" id="popup_close" onClick="javascript:window.close()">
+                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                </a>
+            </div>
+            <!-- 서브 컨텐츠 -->
+            <div class="sub_content_w">
+                <div class="over_h">
+                    <div class="fl_l number">결재번호 : <span>1231231231</span></div>
+                    <!-- 버튼영역 -->
+                    <div class="fl_r">
+                        <div class="btn btn_color1 mr5" onclick="fn_popUp('1')">결재</div>
+                        <div class="btn btn_delete mr5" onclick="fn_popUp('2')">기각</div>
+                        <div class="btn btn_color2 mr5" onclick="fn_popUp('3')">코멘트</div>
+                    </div>
+                    <!-- 버튼영역 끝 -->
+                </div>
+                <!-- 탭 wrap-->
+                <div class="tab_wrap mt10">                    
+                    <!-- 탭1-->
+                    <div class="sub_tab tab_view1 dis_n ">
+                        <ul>
+                            <li class="tab1_bt on"><a>종합</a></li>
+                            <li class="tab2_bt highlights"><a>권한1</a></li>
+                            <li class="tab3_bt"><a>권한2</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_box tab_view1 dis_n">
+                        <!-- 결재유의사항, 권한오남용~, 보안리스크 설명 -->
+                        <div class="over_h">
+                            <div class="fl_l we48">
+                                <div class="sub_header "><p class="title">결재유의사항</p></div>    
+                                <div class="textarea he300">
+                                    <textarea readonly="readonly">
+                                        [이동저장장치]
+                                        - 업무상의 필요로 이동저장장치를 사용하는지 확인하고
+                                        필요한 인원만큼 신청하였는지 확인합니다.
+
+                                        [방화벽]
+                                        - 출발지/목적지와의 통신이 필요한 사유를 확인하고, 과도한 범위의 오픈을 요청하지 않았는지 확인합니다.
+                                        - HKMC 서버접속용 솔루션을 사용하지 않고 통신오픈하는 요건입니다. 솔루션을 통하지 않고 방화벽 예외오픈을 하는 사유를 확인합니다.
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="fl_r we48">
+                                <div class="sub_header "><p class="title">권한 오남용 시 발생 가능한 보안리스크</p></div>
+                                <table class="list_table_no_bg">
+                                    <colgroup>
+                                        <col style="width:50%;">
+                                        <col style="width:50%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>정보유출 <span class="fc_red">(2건)</span></th>
+                                        <th>Compliance/침해사고 <span class="fc_red">(1건)</span></th>
+                                    </tr>
+                                </table>
+                                <div class="sub_header mt30"><p class="title">보안리스크 설명</p></div>    
+                                <div class="textarea he175">
+                                    <textarea readonly="readonly">
+                                        [정보유출]
+                                        - 신청된 권한의 오남용시 정보유출이 발생 할 수 있습니다.
+                                        - 사용에 있어 인사관리자의 주의가 필요합니다.
+
+                                        [Compliance]
+                                        - 관련 법에서 요구하는 내부관리통제 절차의 위반 소지가 있을 수 있습니다. 
+
+                                        [침해사고]
+                                        - 신청된 보안예외권한으로 인해 내부 정보자산이 침해될 가능성이 있습니다.
+                                    </textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 결재유의사항, 권한오남용~, 보안리스크 설명 끝-->
+                        <!-- 의견 -->
+                        <div class="sub_header mt30 cl_b"><p class="title">의견</p></div>    
+                        <div class="textarea he100">
+                            <textarea readonly="readonly">[정보보안팀 최길동 팀장 2020-11-20 15:42] : 이상없음을 확인하였습니다. </textarea>
+                        </div>
+                        <!-- 의견 끝 -->
+                        <!-- 개인별 보안리스크 현황 -->
+                        <div class="sub_header mt30 cl_b"><p class="title">개인별 보안리스크 현황</p></div>    
+                        <table class="list_table_no_bg">
+                            <colgroup>
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                            </colgroup>
+                            <tr>
+                                <th rowspan="2">구분</th>
+                                <th rowspan="2">부서명/회사명</th>
+                                <th rowspan="2">이름</th>
+                                <th colspan="2">보유중인 권한의 오남용시 발생가능한 리스크</th>                                    
+                                <th colspan="2">신규 권한 오남용시 발생가능한 리스크</th>
+                            </tr>
+                            <tr>
+                                <th>정보유출</th>
+                                <th>Compliance/침해사고</th>
+                                <th>정보유출</th>
+                                <th>Compliance/침해사고</th>
+                            </tr>
+                            <tr>
+                                <td>임직원</td>
+                                <td>정보보안팀</td>
+                                <td>홍상무</td>
+                                <td class="text_line_hover2">3건</td>
+                                <td class="text_line_hover2">1건</td>
+                                <td class="text_line_hover2">5건</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>임직원</td>
+                                <td>정보보안팀</td>
+                                <td>홍상무</td>
+                                <td class="text_line_hover2">3건</td>
+                                <td class="text_line_hover2">1건</td>
+                                <td class="text_line_hover2">5건</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                        <!-- 개인별 보안리스크 현황 끝 -->                   
+                    </div>
+                    <!-- 탭1  끝-->
+                    <!-- 탭2-->
+                    <div class="sub_tab tab_view2 ">
+                        <ul>
+                            <li class="tab1_bt"><a>종합</a></li>
+                            <li class="tab2_bt on"><a>권한1</a></li>
+                            <li class="tab3_bt"><a>권한2</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab_box tab_view2 ">
+                        <!-- 접기 -->
+                        <div class="show_hide_wrap mt20">
+                            <div class="show_hide">
+                                <!-- 결재라인 -->
+                                <div class="sub_header ">
+                                    <p class="title fl_l">결재라인</p>
+                                    <div class="btn btn_color1 mr5 fl_r" onclick="">결재선변경</div>
+                                </div>
+                                <table class="list_table1">
+                                    <colgroup>
+                                        <col style="width:200px;">
+                                        <col style="width:18px;">
+                                        <col style="width:200px;">
+                                        <col style="width:18px;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>신청/보완</th>
+                                            <th></th>
+                                            <th>부서장</th>
+                                            <th></th>
+                                            <th>보안</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="">
+                                                <div class="approaval_line mar_auto">
+                                                    <p class="label color1">신청</p>
+                                                    <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                            </td>
+                                            <td class="left_arrow "></td>
+                                            <td class="">
+                                                <div class="approaval_line mar_auto">
+                                                    <p class="label color1">승인</p>
+                                                    <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                            </td>
+                                            <td class="left_arrow "></td>
+                                            <td class="vertical_t">
+                                                <div class="approaval_line others">
+                                                    <p class="label color1">승인</p>
+                                                    <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                                <div class="approaval_line others ">
+                                                    <p class="label color1">승인</p>
+                                                    <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                                <div class="approaval_line others">
+                                                    <p class="label color2">검토중</p>
+                                                    <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                                <div class="approaval_line others">
+                                                    <p class="label color3">기각</p>
+                                                    <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                                <div class="approaval_line others">
+                                                    <p class="label color2">보완요청</p>
+                                                    <p class="team" title="원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상">원가절감추진위원회 생산성생산분가 생산상 성생산분가 생산상</p>
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                                <div class="approaval_line others ">
+                                                    <p class="label color1">승인</p>
+                                                    <p class="team" title="구매시스템 2팀">구매시스템 2팀</p>
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                                <div class="approaval_line others">
+                                                    <p class="label color2">검토중</p>
+                                                    <p class="team" title="구매시스템 2팀">구매시스템 2팀</p> 
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                                <div class="approaval_line others">
+                                                    <p class="label color2">검토중</p>
+                                                    <p class="team" title="구매시스템 2팀">구매시스템 2팀</p> 
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="approaval_line mar_auto">
+                                                    <p class="label color2">보완요청</p>
+                                                    <p class="team" title="구매시스템 2팀">구매시스템 2팀</p> 
+                                                    <p class="name">홍길동 매니저</p>
+                                                    <p class="date ">2020.04.13 HH:MM</p>
+                                                </div>
+                                            </td>
+                                            <td class="left_arrow "></td>
+                                            <td ></td>
+                                            <td class="left_arrow "></td>
+                                            <td ></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="list_table1 mt30">
+                                    <colgroup>
+                                        <col style="width:200px;">
+                                        <col style="width:auto;">
+                                    </colgroup>                            
+                                    <tr>
+                                        <th>협조처</th>
+                                        <td>
+                                            <div class="approaval_line others">
+                                                <p class="label color1">승인</p>
+                                                <p class="team" title="구매시스템 2팀">구매시스템 2팀</p> 
+                                                <p class="name">홍길동 매니저</p>
+                                                <p class="date ">2020.04.13 HH:MM</p>
+                                            </div>
+                                            <div class="approaval_line others">
+                                                <p class="label color3">기각</p>
+                                                <p class="team" title="구매시스템 2팀">구매시스템 2팀</p> 
+                                                <p class="name">홍길동 매니저</p>
+                                                <p class="date ">2020.04.13 HH:MM</p>
+                                            </div>
+                                        </td>
+                                    </tr>                          
+                                </table>
+                                <!-- 결재라인 끝 -->
+                            </div>
+                            <div class="show_hide_btn off">- 결재라인 접기</div>
+                            <div class="show_hide_btn on dis_n">+ 결재라인 펼치기</div>
+                        </div>
+                        <div class="mt60 dis_b over_h">
+                        <!-- 운영팀 -->
+                        <div class="fl_l we48 ">
+                            <div class="sub_header"><p class="title">운영팀</p></div>    
+                            <div class="textarea he100">
+                                <textarea readonly="readonly">적용문의: [정보보안팀 최길동 팀장] 010-0000-0000 </textarea>
+                            </div>
+                        </div>
+                        <!-- 운영팀 끝 -->   
+                        <!-- 의견 -->
+                        <div class="fl_r we48">
+                            <div class="sub_header"><p class="title">의견</p></div>    
+                            <div class="textarea he100">
+                                <textarea readonly="readonly">[정보보안팀 최길동 팀장 2020-11-20 15:42] : 이상없음을 확인하였습니다. </textarea>
+                            </div>
+                        </div>
+                        <!-- 의견 끝 -->
+                        </div>
+                        <!-- 개인별 보안리스크 현황 -->
+                        <div class="sub_header mt40 cl_b">
+                            <p class="title fl_l">상세내역</p>
+                            <!-- 버튼영역 -->
+                            <div class="fl_r ">
+                                <div class="btn btn_color2 mr5" onclick="">일괄수정</div>
+                                <div class="btn btn_color2 mr5" onclick="">엑셀 다운로드</div>
+                                <div class="btn btn_delete mr5" onclick="">개별기각</div>
+                            </div>
+                            <!-- 버튼영역 끝 --> 
+                        </div>
+                        <table class="list_table1">
+                            <colgroup>
+                                <col style="width:5%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                                <col style="width:10%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th class="ck_type1"><input type="checkbox" id=""></th>
+                                    <th>회사명</th>
+                                    <th>회사명</th>
+                                    <th>회사명</th>
+                                    <th>회사명</th>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="ck_type1"><input type="checkbox" id=""></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="sub_header mt40 ">
+                            <p class="title fl_l">권한정보</p><div class="fl_l number ml20">결재번호 : <span>1231231231</span></div>
+                            <!-- 버튼영역 -->
+                            <div class="fl_r ">
+                                <div class="btn btn_color2 mr5" onclick="">수정</div>
+                            </div>
+                            <!-- 버튼영역 끝 --> 
+                        </div>        
+                        <!--권한 정보 -->
+                        <table class="list_table_no_bg">
+                            <colgroup>
+                                <col style="width:10%;">
+                                <col style="width:25%;">
+                                <col style="width:10%;">
+                                <col style="width:25%;">
+                                <col style="width:10%;">
+                                <col style="width:25%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><span class="req_star">*</span>정보1</th>
+                                    <td>
+                                        <div class="search_box"><input type="text" id=""  value="" class="form_control1 we100" ><a class="btn_search"></a>
+                                        </div>
+                                    </td>
+                                    <th>정보2</th>
+                                    <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                    <th>사용기간</th>
+                                    <td>
+                                        <div class="date_area">
+                                            <input type="text" id=""  value="" class="form_control1   input_date we46" readonly>
+                                            <span class="unit">~</span>
+                                            <input type="text" id=""  value="" class="form_control1   input_date we46" readonly>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>정보1</th>
+                                    <td>
+                                        <div class="search_box"><input type="text" id=""  value="" class="form_control2 we100" ><a class="btn_search"></a>
+                                        </div>
+                                    </td>
+                                    <th>정보2</th>
+                                    <td>
+                                        <input type="text" id=""  value="" class="form_control2  we70 fl_l" placeholder="">
+                                        <div class="btn_s btn_lightgray fl_l ml10">버튼</div>
+                                        <th>사용기간</th>
+                                        <td>
+                                            <div class="date_area">
+                                                <input type="text" id=""  value="" class="form_control2   input_date we46" readonly>
+                                                <span class="unit">~</span>
+                                                <input type="text" id=""  value="" class="form_control2   input_date we46" readonly>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>신청권한</th>
+                                        <td>
+                                            <select class="we100">
+                                                <option value="" selected="">선택</option>
+                                            </select>
+                                        </td>
+                                        <th>체크박스</th>
+                                        <td class="ck_type1">
+                                            <input type="checkbox" id="ck1_1"><label for="ck1_1">선택1</label>
+                                            <input type="checkbox" id="ck1_2"><label for="ck1_2">선택2</label>
+                                            <input type="checkbox" id="ck1_3"><label for="ck1_3">선택3</label>
+                                        </td>
+                                        <th>라디오</th>
+                                        <td class="ck_type1">
+                                            <input type="radio" name="chk_info1"  id="ck2_1"/><label for="ck2_1">전체 </label>
+                                            <input type="radio" name="chk_info1"  id="ck2_2"/><label for="ck2_2">선택1 </label>
+                                            <input type="radio" name="chk_info1"  id="ck2_3"/><label for="ck2_3">선택2</label>
+                                        </td> 
+                                    </tr>
+                                    <tr>
+                                        <th>신청사유</th>
+                                        <td colspan="5"><div class="textarea he100"><textarea placeholder=""></textarea></div></td>       
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--권한 정보 끝 -->                 
+                        </div>
+                        <!-- 탭2  끝-->
+                    </div> 
+                    <!-- 탭 wrap 끝 -->
+                </div>
+                <!-- 서브 컨텐츠 끝 -->
+            </div>
+            <!-- 컨텐츠 랩 끝 -->
+
+            <!-- 결재 의견 등록 팝업 -->
+            <div id="popup_mask1" class="popup_mask">
+                <div class="popup_mask_in"></div>
+                <div id="popup1" class="popup_window500">
+                    <div class="modal-content">
+                        <div class="popup_title_wrap">
+                            <p class="popup_title">결재 의견 등록</p>
+                            <a class="popup_close" id="popup_close" href="javascript:fn_close('1');">
+                                <img alt="" src="../resources/images/pop_up/popup_close.png">
+                            </a>
+                        </div>
+                        <!-- popup_panel -->     
+                        <div class="popup_panel he400">
+                            <!-- ※ 유의사항 -->
+                            <div class="sub_title_wrap">
+                                <div class="sub_title fl_l">※ 유의사항</div>
+                            </div>
+                            <table class="list_table1">
+                                <tr>
+                                    <th>결재 유의사항을 읽고 필요한 권한만을 신청함을 확인하였습니다.</th>
+                                </tr>
+                            </table>
+                            <!-- ※ 유의사항  끝-->
+                            <!-- ※ 검토 결과 입력-->
+                            <div class="sub_title_wrap mt30">
+                                <div class="sub_title fl_l">※ 검토 결과 입력</div>
+                                <div class="byte">(<span>0</span>/400byte)</div>
+                            </div>
+                            <div class="textarea he120"> 
+                                <textarea placeholder="Input some text."></textarea>
+                            </div>
+                            <!-- ※ 검토 결과 입력  끝-->
+                            <div class="popbtns_bottom">
+                                <a href="" class="btn btn_color1 mr10">결재</a>
+                                <a href="javascript:fn_close('1');" class="btn btn_gray pop_close">취소</a>
+                            </div>
+                        </div>
+                        <!-- popup_panel 끝 -->
+                    </div>
+                </div>
+            </div>
+            <!-- 결재 의견 등록 팝업 끝 -->       
+            <!-- 코멘트 입력 팝업 -->
+            <div id="popup_mask3" class="popup_mask">
+                <div class="popup_mask_in"></div>
+                <div id="popup3" class="popup_window500">
+                    <div class="modal-content">
+                        <div class="popup_title_wrap">
+                            <p class="popup_title">코멘트 입력</p>
+                            <a class="popup_close" id="popup_close" href="javascript:fn_close('3');">
+                                <img alt="" src="../resources/images/pop_up/popup_close.png">
+                            </a>
+                        </div>
+                        <!-- popup_panel -->     
+                        <div class="popup_panel he400">
+                            <!-- 의견입력 -->
+                            <div class="sub_title_wrap">
+                                <div class="sub_title fl_l">의견 입력</div>
+                                <div class="byte">(<span>0</span>/400byte)</div>
+                            </div>
+                            <div class="textarea he200"> 
+                                <textarea placeholder="Input some text."></textarea>
+                            </div>
+                            <!-- 의견입력  끝-->
+                            <!-- 결재상태 변경  -->
+                            <table class="list_table1">
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:30%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>결재상태변경</th>
+                                        <td>
+                                            <select class="we100">
+                                                <option value="" selected="">보완요청</option>
+                                                <option value="" >보안검토</option>
+                                            </select>
+                                        </td>                              
+                                    </tr>
+                                </thead>
+                            </table>
+                            <!-- 대결자검색 -->
+                            <div class="popbtns_bottom">
+                                <a href="" class="btn btn_color2 mr10">메일</a>
+                                <a href="" class="btn btn_color1 mr10">등록</a>
+                                <a href="javascript:fn_close('3');" class="btn btn_gray pop_close">취소</a>
+                            </div>
+                        </div>
+                        <!-- popup_panel 끝 -->
+                    </div>
+                </div>
+            </div>
+            <!-- 코멘트 입력 팝업 끝 -->
+        </div>
+        <!-- js -->
+        <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+        <script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+        <script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+        <script type="text/javascript" src="../resources/js/printThis.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+        <script type="text/javascript" src="../resources/js/common.js"></script>
+    </body>
+    </html>

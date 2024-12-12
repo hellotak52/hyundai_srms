@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script type="text/javascript">
+
+//popup1
+function fn_popUp(number){
+    $("#popup_mask" + number).show();
+    $("#popup" + number).show();
+}   
+
+//레이어 닫기 버튼 (각자 init에 들어감)
+function fn_close(number){
+    $("#popup_mask" + number).hide();
+    $("#popup" + number).hide();
+}
+</script>
+<title>현대 오토에버 SRMS</title>
+<!-- mata tag -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="Robots" content="ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <div class="header_wrap">
+            <!-- header_top -->
+            <div class="header_top">
+                <h1>
+                    <a href="../0_main/main.html">
+                        <img src="../resources/images/main/SRMS_logo.png" alt="SRMS">
+                        <img src="../resources/images/main/SRMS_logo2.png" alt="SRMS">
+                    </a>
+                </h1>
+                <div class="customer">
+                    <div class="header_img">
+                        <a href=""><span class="bb">홍길동</span><span class="bb">매니저</span></a>
+                        <a href=""><span>기아자동차</span><span>보안관리1팀</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="header_time">
+                        <a href=""><span class="bb">20:22</span></a>
+                        <a href=""><span>로그인연장</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="main_bt_logout">로그아웃</div> 
+                    <span class="header_line"></span>
+                    <div class="language">
+                        <select class="we100">
+                            <option value="">한국어</option>
+                            <option value="">영어</option>
+                        </select>
+                    </div>   
+                </div>
+            </div>
+            <!-- header_menu -->
+            <div class="header_menu">
+                <ul class="menu">           
+                    <li class="level1 active"><a href=""><h2>결재 업무</h2></a></li>
+                    <li class="level1"><a href=""><h2>권한/자산 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>운영관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>보안 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>시스템 관리</h2></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 컨텐츠 랩 -->
+        <div class="content_wrap">
+            <!-- 사이드 메뉴 -->
+            <div class="sidenav">
+                <div class="dropdown-btn"><span>개인 전자 결재함</span><span class="arrow"></span></div>
+                <div class="dropdown-container">
+                    <a href="#" class="active">결재할 문서</a>
+                    <a href="#">작성중 문서</a>
+                    <a href="#">결재 진행중 문서</a>
+                    <a href="#">결재 완료 문서 (신청자)</a>
+                    <a href="#">결재 완료 문서 (결재자)</a>
+                </div>
+                <div class="dropdown-btn"><span>부서 전자 결재함</span><span class="arrow"></span></div>
+                <div class="dropdown-container">
+                    <a href="#">부서 수신 진행함</a>
+                    <a href="#">부서 수신 완료함</a>
+                    <a href="#">부서 발신 진행함</a>
+                    <a href="#">부서 발신 완료함</a>               
+                </div>
+                <a href=""><span>신청이력 조회</span></a>
+            </div>
+            <!-- 사이드 메뉴 끝-->
+            <!-- 서브 컨텐츠 -->
+            <div class="sub_content">
+                <div class="sub_header"><p class="title">권한 템플릿 등록/수정</p></div>
+                <!-- 템플릿 정보 입력-->
+                <div class="sub_header_s mt30">
+                    <p class="title_s fl_l">템플릿 정보 입력</p>
+                </div>        
+                <table class="list_table_no_bg">
+                    <colgroup>
+                        <col style="width:10%;">
+                        <col style="width:20%;">
+                        <col style="width:10%;">
+                        <col style="width:30%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>템플릿명</th>
+                            <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""> </td>
+                            <th>권한선택</th>
+                            <td>
+                                <select class="we100">
+                                    <option value="" selected="">선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 템플릿 정보 끝-->
+                <div class="sub_header_s mt30">
+                    <p class="title_s fl_l">권한 정보 입력</p>
+                </div> 
+                <!-- 정보입력 apply_wrap1 -->
+                <div class="apply_wrap1">
+                    <!-- Autopass 계정 신청 -->
+                    <div class="sub_header_s ">
+                        <p class="title_s fl_l">Autopass 계정 신청</p>
+                    </div>        
+                    <table class="list_table_no_bg">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:25%;">
+                            <col style="width:10%;">
+                            <col style="width:25%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>접속시스템</th>
+                                <td>
+                                    <div class="search_box "><input type="text" id=""  value="" class="form_control2 we70 fl_l" ><a class="btn_search" style="right: 30%!important;"></a>
+                                    </div>
+                                    <div class="btn_s btn_lightgray fl_l ml10">삭제</div>
+                                </td>
+                                <th>접속시스템 영문명</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder="자동입력"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- Autopass 계정 신청 끝 -->
+                    <!-- VPN 계정 신청 -->
+                    <div class="sub_header_s mt40">
+                        <p class="title_s fl_l">VPN 계정 신청</p>
+                    </div>        
+                    <table class="list_table_no_bg">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:25%;">
+                            <col style="width:10%;">
+                            <col style="width:25%;">
+                            <col style="width:10%;">
+                            <col style="width:25%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>접속정책</th>
+                                <td>
+                                    <div class="search_box "><input type="text" id=""  value="" class="form_control2 we70 fl_l" ><a class="btn_search" style="right: 30%!important;"></a>
+                                    </div>
+                                    <div class="btn_s btn_lightgray fl_l ml10">삭제</div>
+                                </td>
+                                <th>접속시스템 영문명</th>
+                                <td colspan="3"><input type="text" id=""  value="" class="form_control1  we40" placeholder="자동입력"></td>
+                            </tr>
+                            <tr>
+                                <th>접속시스템 IP</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>접속시스템</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                                <th>통신 프로토콜</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- VPN 계정 신청 끝 -->
+                    <!-- 통합 PC 보안 -->
+                    <div class="sub_header_s mt40 ">
+                        <p class="title_s fl_l">통합 PC 보안</p>
+                        <div class="btn btn_gray fl_r mr5" >조회</div>
+                    </div>
+                    <table class="list_table_y">
+                        <colgroup>
+                            <col style="width:35%;">
+                            <col style="width:35%;">
+                            <col style="width:12%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>예외정책</th>
+                                <th>설명</th>
+                                <th>삭제</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="tab_y_scroll he140">
+                        <table class="list_table1" style="border:none;">
+                            <colgroup>
+                                <col style="width:35%;">
+                                <col style="width:35%;">
+                                <col style="width:10%;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><div class="btn_s btn_lightgray ">삭제</div></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><div class="btn_s btn_lightgray ">삭제</div></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td><div class="btn_s btn_lightgray ">삭제</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 통합 PC 보안 끝 -->
+                    <!-- 협력사 인터넷 VDI 신청 입력 -->
+                    <div class="sub_header_s mt40 ">
+                        <p class="title_s fl_l">협력사 인터넷 VDI 신청</p>
+                    </div>   
+                    <table class="list_table_no_bg">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:90%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>PC IP</th>
+                                <td>
+                                    <select class="we30 fl_l">
+                                        <option value="" selected="">선택</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 협력사 인터넷 VDI 신청 입력 끝-->
+                    <!-- 정산장비 네트웍 허용 및 보안 S/W 예외 -->
+                    <div class="sub_header_s mt40">
+                        <p class="title_s fl_l">정산장비 네트웍 허용 및 보안 S/W 예외 </p>
+                    </div>        
+                    <table class="list_table_no_bg">
+                        <colgroup>
+                            <col style="width:10%;">
+                            <col style="width:25%;">
+                            <col style="width:10%;">
+                            <col style="width:25%;">
+                            <col style="width:10%;">
+                            <col style="width:25%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>설치 예외 보안S/W</th>
+                                <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""> </td>
+                                <th>설치 예외사유</th>
+                                <td colspan="3"><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 정산장비 네트웍 허용 및 보안 S/W 예외 끝 -->
+                </div>
+                <!-- 정보입력 apply_wrap1 끝-->
+                <!-- 버튼영역 -->
+                <div class="fl_r mt20">
+                    <div class="btn btn_color1  mr7">저장</div>
+                    <div class="btn btn_gray ">목록</div>
+                </div>
+                <!-- 버튼영역 끝 -->
+            </div>
+            <!-- 서브 컨텐츠 끝 -->
+        </div>
+        <!-- 컨텐츠 랩 끝 -->
+
+
+        <!-- footer -->
+        <div class="footer_wrap">
+            <div class="footer_logo">
+                <a href="main.html"><img src="../resources/images/main/hyundai.jpg" alt="HYUNDAI"></a>
+            </div>
+            <div class="footer_menu">
+                <p>
+                    <span><a href="">공지사항</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">FAQ</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">담당자 안내 및 문의</a></span>
+                    <span class="header_line"></span>
+                    <span><a href="">개인정보 처리방침</a></span>        
+                </p>
+                <p class="copyright">COPYRIGHT © 2021 HYUNDAI MOTOR GROUP. ALL RIGHTS RESERVED.</p>    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- js -->
+<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+<script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+<script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="../resources/js/printThis.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+<script type="text/javascript" src="../resources/js/common.js"></script>
+</body>
+</html>

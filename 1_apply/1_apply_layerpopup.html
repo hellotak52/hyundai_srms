@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <script type="text/javascript">
+
+//popup1
+function fn_popUp(number){
+    $("#popup_mask" + number).show();
+    $("#popup" + number).show();
+}   
+
+//레이어 닫기 버튼 (각자 init에 들어감)
+function fn_close(number){
+    $("#popup_mask" + number).hide();
+    $("#popup" + number).hide();
+}
+</script>
+<title>현대 오토에버 SRMS</title>
+<!-- mata tag -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="Robots" content="ALL">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+<meta name="description" content="" />
+<meta name="author" content="" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <div class="header_wrap">
+            <!-- header_top -->
+            <div class="header_top">
+                <h1>
+                    <a href="../0_main/main.html">
+                        <img src="../resources/images/main/SRMS_logo.png" alt="SRMS">
+                        <img src="../resources/images/main/SRMS_logo2.png" alt="SRMS">
+                    </a>
+                </h1>
+                <div class="customer">
+                    <div class="header_img">
+                        <a href=""><span class="bb">홍길동</span><span class="bb">매니저</span></a>
+                        <a href=""><span>기아자동차</span><span>보안관리1팀</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="header_time">
+                        <a href=""><span class="bb">20:22</span></a>
+                        <a href=""><span>로그인연장</span></a>
+                    </div>
+                    <span class="header_line"></span>
+                    <div class="main_bt_logout">로그아웃</div> 
+                    <span class="header_line"></span>
+                    <div class="language">
+                        <select class="we100">
+                            <option value="">한국어</option>
+                            <option value="">영어</option>
+                        </select>
+                    </div>   
+                </div>
+            </div>
+            <!-- header_menu -->
+            <div class="header_menu">
+                <ul class="menu">           
+                    <li class="level1 active"><a href=""><h2>결재 업무</h2></a></li>
+                    <li class="level1"><a href=""><h2>권한/자산 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>운영관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>보안 관리</h2></a></li>
+                    <li class="level1"><a href=""><h2>시스템 관리</h2></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 컨텐츠 랩 -->
+        <div class="content_wrap">
+            <!-- 사이드 메뉴 -->
+            <div class="sidenav">
+                <h3>권한신청</h3>
+                <div class="step_box">                    
+                    <ul>
+                        <li class="on">
+                            <p class="number">Step 01.</p>
+                            <p class="step_box_text">권한정보 입력</p></li>
+                            <li><p class="number">Step 02.</p>
+                                <p class="step_box_text">사용자정보 입력</p></li>
+                                <li>
+                                    <p class="number">Step 03.</p>
+                                    <p class="step_box_text">조합 및 신청</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 사이드 메뉴 끝-->
+                    <!-- 서브 컨텐츠 -->
+                    <div class="sub_content">
+                        <div class="sub_header">
+                            <p class="title">권한신청 팝업모음<span class="help_tip"><img src="../resources/images/main/tip.png" alt="도움말" title="도움말"></span></p>
+                        </div> 
+                        <!-- 버튼영역 -->
+                        <div class="mt40">
+                            <div class="btn btn_delete mr5" onclick="fn_popUp('1')">접속시스템 선택</div>
+                            <div class="btn btn_delete mr5" onclick="fn_popUp('2')">VPN 접속시스템 조회</div>
+                            <div class="btn btn_delete mr5" onclick="fn_popUp('3')">보안 리스크 안내</div>
+                            <div class="btn btn_delete mr5" onclick="fn_popUp('4')">예외 S/W</div>
+                            <div class="btn btn_delete mr5" onclick="fn_popUp('5')">DB 서버 조회</div>
+                            <div class="btn btn_delete mr5" onclick="fn_popUp('6')">템플릿 가져오기</div>
+                            <div class="btn btn_delete mr5" onclick="fn_popUp('7')">AP 정보 조회</div>
+                            <div class="btn btn_delete mr5" onclick="fn_popUp('8')">직원검색</div>
+                            <div class="btn btn_delete mr5" onclick="fn_popUp('9')">협력사인원 검색</div>
+                            <p class="mt30">
+                                <div class="btn btn_delete mr5" onclick="fn_popUp('10')">방화벽 - ITSM 등록 서버 조회, 담당서버리스트 조회</div>
+                                <div class="btn btn_delete mr5" onclick="fn_popUp('11')">방화벽 - 사용자 검색</div>
+                            </p>
+                        </div>
+                        <!-- 버튼영역 끝 -->
+
+                    </div>
+                    <!-- 서브 컨텐츠 끝 -->                            
+                </div>
+                <!-- 컨텐츠 랩 -->
+
+                <!-- 접속시스템 선택 팝업 -->
+                <div id="popup_mask1" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup1" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">접속시스템 선택</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('1');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->
+                            <div class="popup_panel he520">
+                                <!-- 결재자 -->
+                                <div class="sub_title_wrap">
+                                    <span class="fc22 f_web">※ Autopass를 통해 접속하고자 하는 시스템을 선택하세요.</span>
+                                </div>        
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:8%">
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col style="width:25%">
+                                        <col style="width:17%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="ck_type1"><input type="checkbox" id=""></th>
+                                            <th>시스템영문명</th>
+                                            <th>시스템명</th>
+                                            <th>담당부서</th>
+                                            <th>담당자</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <div class="tab_y_scroll he300">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:8%">
+                                            <col style="width:25%">
+                                            <col style="width:25%">
+                                            <col style="width:25%">
+                                            <col style="width:15%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>PDIS</td>
+                                                <td>PDIS</td>
+                                                <td>PDIS</td>
+                                                <td>PDIS</td> 
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>aSIMS</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>EBOM</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>     
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>									
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 결재자 끝 -->                        
+
+                                <div class="popbtns_bottom">
+                                    <a href="" class="btn btn_color1 mr10">저장</a>
+                                    <a href="javascript:fn_close('1');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝-->                    
+                        </div>
+                    </div>
+                </div>
+                <!-- 접속시스템 선택 팝업 끝 -->
+
+                <!-- VPN 접속시스템 조회 팝업 -->
+                <div id="popup_mask2" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup2" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">VPN접속시스템 조회</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('2');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->
+                            <div class="popup_panel he500">
+                                <!-- VPN접속시스템 검색 -->
+                                <table class="sub_sort_table border_t2">
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>시스템명</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <th>IP</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <td><div class="btn btn_gray">조회</div></td>   
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>정보시스템코드</th>
+                                        <th>시스템명</th>
+                                        <th>SEQ</th>
+                                        <th>IP</th>
+                                        <th>Port</th>
+                                    </tr>
+                                </table>
+                                <div class="tab_y_scroll he250">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:20%;">
+                                            <col style="width:20%;">
+                                            <col style="width:20%;">
+                                            <col style="width:20%;">
+                                            <col style="width:18%;">
+                                        </colgroup>
+                                        <tr>
+                                            <td>F1316</td>
+                                            <td>보안권한관리시스템</td>
+                                            <td>1</td>
+                                            <td>10.10.1.1</td>
+                                            <td>80,443</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F1316</td>
+                                            <td>보안권한관리시스템</td>
+                                            <td>2</td>
+                                            <td>10.10.2.2</td>
+                                            <td>80,443</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F0101</td>
+                                            <td>보안포탈</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>								
+                                    </table>
+                                </div>
+                                <!-- VPN접속시스템 검색 끝 -->                        
+                                <div class="popbtns_bottom">
+                                    <a href="javascript:fn_close('2');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝--> 
+                        </div>
+                    </div>
+                </div>
+                <!-- VPN 접속시스템 조회 팝업 끝 -->
+
+                <!-- 보안 리스크 안내 팝업 -->
+                <div id="popup_mask3" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup3" class="popup_window640">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">보안 리스크 안내</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('3');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->               
+                            <div class="popup_panel he600">
+                                <p class="lh24">
+                                    <span class="fc22 f_web">※ 자동 보안성검토 룰에 의해 보안리스크가 있다고 판단하였습니다. 아래의 보안리스크 안내사항을 읽고 예외사유를 입력해주세요.</span>
+                                </p>
+                                <!-- 통보대상자 검색 -->
+                                <div class="sub_title_wrap mt10">
+                                    <div class="sub_title fl_l">보안리스크 목록</div>
+                                </div>
+                                <div class="textarea_readonly he100 ">
+                                    <textarea class="f_web">
+                                        1) (정보유출)표준포트 오픈
+                                        2) (정보유출)외부망 통신오픈
+                                        3) (침해사고)oooooo
+                                        4) (침해사고)oooooo
+                                    </textarea>
+                                </div>
+                                <!-- 통보대상자 검색 끝-->
+
+                                <!-- 선조치 요청 사유 -->
+                                <div class="sub_title_wrap mt30">
+                                    <div class="sub_title fl_l">보안리스크 안내</div>
+                                </div> 
+                                <div class="textarea_readonly he100">
+                                    <textarea placeholder="">출발지가 PC인 경우 목적지 서버에 표준포트로 접속하기 위해서는 SAC를 사용해야합니다. SAC를 사용하지 못하는 이유를 설명해주세요. 
+                                        출발지가 PC인 경우 목적지 서버에 표준포트로 접속하기 위해서는 SAC를 사용해야합니다. SAC를 사용하지 못하는 이유를 설명해주세요. 
+                                        출발지가 PC인 경우 목적지 서버에 표준포트로 접속하기 위해서는 SAC를 사용해야합니다. SAC를 사용하지 못하는 이유를 설명해주세요. 출발지가 PC인 경우 목적지 서버에 표준포트로 접속하기 위해서는 SAC를 사용해야합니다. SAC를 사용하지 못하는 이유를 설명해주세요.
+                                    </textarea>
+                                </div>
+                                <!-- 선조치 요청 사유  끝-->
+
+                                <!-- 선조치 요청 사유 -->
+                                <div class="sub_title_wrap mt30">
+                                    <div class="sub_title fl_l">사유입력</div>
+                                    <div class="byte">(<span>0</span>/500byte)</div>
+                                </div> 
+                                <div class="textarea he100"><textarea placeholder="입력하세요."></textarea></div>
+                                <!-- 선조치 요청 사유  끝-->
+                                <p class="mt10 lh24">
+                                    ※ 본 신청건으로 인해 발생하는 보안리스크를 확인하였으며, 업무상 필요한 권한 만큼을 신청하였음을 확인하였습니다.
+                                </p>
+                                <p class="lh24">
+                                    ※ 보안팀 검토시 사유가 적절하지 않거나, 충분히 설명되지 않는 경우 기각됨을 안내드립니다.
+                                </p>
+
+                                <!-- 버튼 -->
+                                <div class="popbtns_bottom">
+                                    <a href="" class="btn btn_color1 mr10">입력완료 및 동의</a>
+                                    <a href="javascript:fn_close('3');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                                <!-- 버튼버튼 끝-->
+                            </div>
+                            <!-- popup_panel 끝 -->
+                        </div>
+                    </div>
+                </div>
+                <!--보안 리스크 안내 팝업 끝 -->
+
+                <!-- 예외 S/W  팝업 -->
+                <div id="popup_mask4" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup4" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">예외 S/W 선택</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('4');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->     
+                            <div class="popup_panel he550">
+                                <!-- ※ 유의사항 -->
+                                <div class="sub_title_wrap">
+                                    <div class="sub_title fl_l">※ 유의사항</div>
+                                </div>
+                                <table class="list_table1">
+                                    <tr>
+                                        <td class="alignLeft">
+                                            <p><span class="fc22 f_web">보안프로그램 설치를 할 수 없는 OS 이거나 설치 시, 장애가 발생하는 장비</span>에 대해 예외 신청이 가능하며</p>
+                                            <p>USB 포트 예외와 같은 부분적인 기능 예외는 "이동식저장장치사용(SEP)" 메뉴에서 예외 신청을 해 주시기 바랍니다.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="btn btn_color1 fl_r mt10">확인</div>  
+                                <!-- ※ 유의사항  끝-->
+                                <!-- 결재자 -->
+                                <div class="sub_title_wrap mt50">
+                                    <div class="sub_title fl_l">※ 예외 프로그램 선택</div>
+                                </div>        
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:10%">
+                                        <col style="width:30%">
+                                        <col style="width:30%">
+                                        <col style="width:30%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="ck_type1"><input type="checkbox" id=""></th>
+                                            <th>프로그램명</th>
+                                            <th>설명</th>
+                                            <th>예외사유</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <div class="tab_y_scroll he300">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:10%">
+                                            <col style="width:30%">
+                                            <col style="width:30%">
+                                            <col style="width:28%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>PDIS</td>
+                                                <td>PDIS</td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>aSIMS</td>
+                                                <td></td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>EBOM</td>
+                                                <td></td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>     
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ck_type1"><input type="checkbox" id=""></td>
+                                                <td>...</td>
+                                                <td></td>
+                                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            </tr>									
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 결재자 끝 -->
+                                <div class="popbtns_bottom">
+                                    <a href="" class="btn btn_color1 mr10">저장</a>
+                                    <a href="javascript:fn_close('4');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝 -->                    
+                        </div>
+                    </div>
+                </div>
+                <!-- 예외 S/W 팝업 끝 -->
+
+                <!-- DB서버조회 팝업 -->
+                <div id="popup_mask5" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup5" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">DB서버 조회</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('5');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->
+                            <div class="popup_panel he500">
+                                <!-- DB서버 조회 -->
+                                <table class="sub_sort_table border_t2">
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>Group</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <th>관리팀</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <th>IP</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <td><div class="btn btn_gray">조회</div></td>   
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:18%;">
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                        <col style="width:22%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>DBGroup</th>
+                                        <th>개발/운영</th>
+                                        <th>Hostname</th>
+                                        <th>IP</th>
+                                        <th>관리팀</th>
+                                    </tr>
+                                </table>
+                                <div class="tab_y_scroll he250">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:18%;">
+                                            <col style="width:20%;">
+                                            <col style="width:20%;">
+                                            <col style="width:20%;">
+                                            <col style="width:20%;">
+                                        </colgroup>
+                                        <tr>
+                                            <td>F1316</td>
+                                            <td>보안권한관리시스템</td>
+                                            <td>1</td>
+                                            <td>10.10.1.1</td>
+                                            <td>aa</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F1316</td>
+                                            <td>보안권한관리시스템</td>
+                                            <td>2</td>
+                                            <td>10.10.2.2</td>
+                                            <td>80,443</td>
+                                        </tr>
+                                        <tr>
+                                            <td>F0101</td>
+                                            <td>보안포탈</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>								
+                                    </table>
+                                </div>
+                                <!-- DB서버 조회 검색 끝 -->                        
+                                <div class="popbtns_bottom">
+                                    <a href="javascript:fn_close('5');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝--> 
+                        </div>
+                    </div>
+                </div>
+                <!-- DB서버 조회 팝업 끝 -->
+
+                <!-- 템플릿 가져오기 팝업 -->
+                <div id="popup_mask6" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup6" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">템플릿 가져오기</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('6');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->
+                            <div class="popup_panel he530">
+                                <div class="sub_title_wrap">
+                                    <div class="sub_title fl_l">템플릿 선택</div>
+                                </div>
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:10%;">
+                                        <col style="width:45%;">
+                                        <col style="width:45%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>템플릿명</th>
+                                        <th>설명</th>
+                                    </tr>
+                                </table>
+                                <div class="tab_y_scroll he300">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:45%;">
+                                            <col style="width:43%;">
+                                        </colgroup>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td>템플릿명</td>
+                                            <td>템플릿명</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>                      
+                                <div class="popbtns_bottom">
+                                    <a href="" class="btn btn_color1 mr10">선택</a>
+                                    <a href="javascript:fn_close('6');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝-->                    
+                        </div>
+                    </div>
+                </div>
+                <!-- 템플릿 가져오기 팝업 끝 -->
+
+                <!-- AP 정보 조회 팝업 -->
+                <div id="popup_mask7" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup7" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">AP정보 조회</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('7');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->
+                            <div class="popup_panel he530">
+                                <!-- AP 정보 검색 --> 
+                                <table class="sub_sort_table border_t2">
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>설치지역</th>
+                                            <td>
+                                                <select class="we100">
+                                                    <option value="" selected="">선택</option>
+                                                    <option value="" ></option>
+                                                </select>
+                                            </td>    
+                                            <th>SSID</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <td><div class="btn btn_gray">조회</div></td>   
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                        <col style="width:20%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>설치지역</th>
+                                        <th>지역상세</th>
+                                        <th>SSID</th>
+                                        <th>관리팀</th>
+                                        <th>담당자</th>
+                                    </tr>
+                                </table>
+                                <div class="tab_y_scroll he250">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:20%;">
+                                            <col style="width:20%;">
+                                            <col style="width:20%;">
+                                            <col style="width:20%;">
+                                            <col style="width:18%;">
+                                        </colgroup>
+                                        <tr>
+                                            <td>설치지역</td>
+                                            <td>지역상세</td>
+                                            <td>SSID</td>
+                                            <td>관리팀</td>
+                                            <td>담당자</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>								
+                                    </table>
+                                </div>
+                                <!-- AP 정보 검색 끝 -->                        
+                                <div class="popbtns_bottom">
+                                    <a href="javascript:fn_close('7');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝--> 
+                        </div>
+                    </div>
+                </div>
+                <!-- AP 정보 조회 팝업 끝 -->
+
+                <!-- 직원검색 팝업 -->
+                <div id="popup_mask8" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup8" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">직원 검색</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('8');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->
+                            <div class="popup_panel he500">
+                                <!-- AP 정보 검색 -->
+                                <table class="sub_sort_table border_t2">
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>부서명</th>
+                                            <td>
+                                                <select class="we100">
+                                                    <option value="" selected="">선택</option>
+                                                    <option value="" ></option>
+                                                </select>
+                                            </td>    
+                                            <th>이름</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <td><div class="btn btn_gray">조회</div></td>   
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:8%;">
+                                        <col style="width:18%;">
+                                        <col style="width:18%;">
+                                        <col style="width:18%;">
+                                        <col style="width:18%;">
+                                        <col style="width:20%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>회사명</th>
+                                        <th>부서명</th>
+                                        <th>직급</th>
+                                        <th>이름</th>
+                                        <th>HKMC AD계정</th>
+                                    </tr>
+                                </table>
+                                <div class="tab_y_scroll he250">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:8%;">
+                                            <col style="width:18%;">
+                                            <col style="width:18%;">
+                                            <col style="width:18%;">
+                                            <col style="width:18%;">
+                                            <col style="width:18%;">
+                                        </colgroup>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td>회사명</td>
+                                            <td>부서명</td>
+                                            <td>직급</td>
+                                            <td>이름</td>
+                                            <td>HKMC AD계정</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>								
+                                    </table>
+                                </div>
+                                <!-- 직원 검색 끝 -->                        
+                                <div class="popbtns_bottom">
+                                    <a href="" class="btn btn_color1 mr10">선택</a>
+                                    <a href="javascript:fn_close('8');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝--> 
+                        </div>
+                    </div>
+                </div>
+                <!-- 직원검색 팝업 끝 -->
+
+                <!-- 협력사인원 검색 팝업 -->
+                <div id="popup_mask9" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup9" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">협력사인원 검색</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('9');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->
+                            <div class="popup_panel he500">
+                                <!-- AP 정보 검색 -->   
+                                <table class="sub_sort_table border_t2">
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>회사명</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>  
+                                            <th>이름</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <td><div class="btn btn_gray">조회</div></td>   
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:8%;">
+                                        <col style="width:30%;">
+                                        <col style="width:30%;">
+                                        <col style="width:32%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>회사명</th>
+                                        <th>이름</th>
+                                        <th>HKMC AD계정</th>
+                                    </tr>
+                                </table>
+                                <div class="tab_y_scroll he250">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:8%;">
+                                            <col style="width:30%;">
+                                            <col style="width:30%;">
+                                            <col style="width:30%;">
+                                        </colgroup>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td>회사명</td>
+                                            <td>이름</td>
+                                            <td>HKMC AD계정</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="radio" id=""></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>								
+                                    </table>
+                                </div>
+                                <!-- 협력사인원 검색 끝 -->                        
+                                <div class="popbtns_bottom">
+                                    <a href="" class="btn btn_color1 mr10">선택</a>
+                                    <a href="javascript:fn_close('9');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝--> 
+                        </div>
+                    </div>
+                </div>
+                <!-- 협력사인원 검색 팝업 끝 -->
+                <!-- ITSM 등록 서버 조회 , 담당서버리스트 팝업 -->
+                <div id="popup_mask10" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup10" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">ITSM 등록 서버 조회, 담당서버리스트</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('10');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->
+                            <div class="popup_panel he500">  
+                                <table class="sub_sort_table border_t2">
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>Hostname</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <th>IP</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <td><div class="btn btn_gray">조회</div></td>   
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:5%;">
+                                        <col style="width:10%;">
+                                        <col style="width:10%;">
+                                        <col style="width:10%;">
+                                        <col style="width:10%;">
+                                        <col style="width:10%;">
+                                        <col style="width:11%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>관리부서</th>
+                                        <th>관리자</th>
+                                        <th>시스템 업무명</th>
+                                        <th>Hostname</th>
+                                        <th>IP</th>
+                                        <th>위치</th>
+                                    </tr>
+                                </table>
+                                <div class="tab_y_scroll he250">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:5%;">
+                                            <col style="width:10%;">
+                                            <col style="width:10%;">
+                                            <col style="width:10%;">
+                                            <col style="width:10%;">
+                                            <col style="width:10%;">
+                                            <col style="width:10%;">
+                                        </colgroup>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                    </table>
+                                </div>                      
+                                <div class="popbtns_bottom">
+                                    <a href="" class="btn btn_color1 mr10">선택 추가</a>
+                                    <a href="javascript:fn_close('10');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝--> 
+                        </div>
+                    </div>
+                </div>
+                <!-- ITSM 등록 서버 조회끝 -->
+                <!-- 사용자 검색 팝업 -->
+                <div id="popup_mask11" class="popup_mask">
+                    <div class="popup_mask_in"></div>
+                    <div id="popup11" class="popup_window880">
+                        <div class="modal-content">
+                            <div class="popup_title_wrap">
+                                <p class="popup_title">사용자 검색</p>
+                                <a class="popup_close" id="popup_close" href="javascript:fn_close('11');">
+                                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                                </a>
+                            </div>
+                            <!-- popup_panel -->
+                            <div class="popup_panel he530">
+                                <div class="sub_title_wrap">
+                                    <div class="ck_type2 fl_l mtm7">
+                                        <input type="radio" name="chk_info1"  id="ck1_1" checked="checked"/><label for="ck1_1">임직원 </label>
+                                        <input type="radio" name="chk_info1"  id="ck1_2"/><label for="ck1_2">협력사</label>
+                                    </div> 
+                                </div> 
+                                <table class="sub_sort_table">
+                                    <colgroup>
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                        <col style="width:200px;">
+                                        <col style="width:80px;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>회사명</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <th>이름</th>
+                                            <td><input type="text" id=""  class="form_control1 we100"></td>
+                                            <td><div class="btn btn_gray">조회</div></td>   
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="list_table_y">
+                                    <colgroup>
+                                        <col style="width:5%;">
+                                        <col style="width:10%;">
+                                        <col style="width:10%;">
+                                        <col style="width:10%;">
+                                        <col style="width:10%;">
+                                        <col style="width:11%;">
+                                    </colgroup>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>구분</th>
+                                        <th>부서/회사</th>
+                                        <th>이름</th>
+                                        <th>IP</th>
+                                        <th>기기타입</th>
+                                    </tr>
+                                </table>
+                                <div class="tab_y_scroll he250">
+                                    <table class="list_table1"  style="border: none;" >
+                                        <colgroup>
+                                            <col style="width:5%;">
+                                            <col style="width:10%;">
+                                            <col style="width:10%;">
+                                            <col style="width:10%;">
+                                            <col style="width:10%;">
+                                            <col style="width:10%;">
+                                        </colgroup>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ck_type1"><input type="checkbox" id=""></td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>asdf</td>
+                                            <td>10.10.1.1</td>
+                                            <td>asdf</td>
+                                        </tr>
+                                    </table>
+                                </div>                      
+                                <div class="popbtns_bottom">
+                                    <a href="" class="btn btn_color1 mr10">선택 추가</a>
+                                    <a href="javascript:fn_close('11');" class="btn btn_gray pop_close">닫기</a>
+                                </div>
+                            </div>
+                            <!-- popup_panel 끝--> 
+                        </div>
+                    </div>
+                </div>
+                <!-- ITSM 등록 서버 조회끝 -->
+
+
+                <!-- footer -->
+                <div class="footer_wrap">
+                    <div class="footer_logo">
+                        <a href="main.html"><img src="../resources/images/main/hyundai.jpg" alt="HYUNDAI"></a>
+                    </div>
+                    <div class="footer_menu">
+                        <p>
+                            <span><a href="">공지사항</a></span>
+                            <span class="header_line"></span>
+                            <span><a href="">FAQ</a></span>
+                            <span class="header_line"></span>
+                            <span><a href="">담당자 안내 및 문의</a></span>
+                            <span class="header_line"></span>
+                            <span><a href="">개인정보 처리방침</a></span>        
+                        </p>
+                        <p class="copyright">COPYRIGHT © 2021 HYUNDAI MOTOR GROUP. ALL RIGHTS RESERVED.</p>    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- js -->
+        <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+        <script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+        <script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+        <script type="text/javascript" src="../resources/js/printThis.js"></script>
+        <script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+        <script type="text/javascript" src="../resources/js/common.js"></script>
+    </body>
+    </html>

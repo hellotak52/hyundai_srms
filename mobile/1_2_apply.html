@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>현대 오토에버 SRMS</title>
+    <!-- mata tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="Robots" content="ALL">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=yes">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../resources/css/common_m.css">
+</head>
+<script type="text/javascript">
+//popup1
+function fn_popUp(number){
+    $("#popup_mask" + number).show();
+    $("#popup" + number).show();
+    $('body').addClass('scroll_dis').on('scroll touchmove', function(e){
+        e.preventDefault();
+    });
+}   
+
+//popup1 닫기 버튼 (각자 init에 들어감)
+function fn_close(number){
+    $("#popup_mask" + number).hide();
+    $("#popup" + number).hide();
+    $('body').removeClass('scroll_dis').off('scroll touchmove');
+}
+
+//menu
+function sidenav_open(){
+    $("#sidenav_mask").show();
+    $("#sidenav").show();
+    $('body').addClass('scroll_dis').on('scroll touchmove', function(e){
+        e.preventDefault();
+    });
+}   
+
+//menu 닫기 버튼 (각자 init에 들어감)
+function sidenav_close(){
+    $("#sidenav_mask").hide();
+    $("#sidenav").hide();
+    $('body').removeClass('scroll_dis').off('scroll touchmove');
+}
+</script>
+<body>
+    <div id="wrap">
+        <!-- header-->
+        <div class="header_top">
+            <h1 onclick="location.href='0_main.html'" ><img src="../resources/images/main/m_SRMS_logo.png" alt="SRMS"></h1>
+            <div class="menu" onclick="sidenav_open()"><img src="../resources/images/main/m_SRMS_menu.png" alt="menu"></div>
+        </div>
+        <!-- 사이드 메뉴 -->
+        <div id="sidenav_mask" class="sidenav_mask">
+            <div class="sidenav_mask_in"></div>
+            <div id="sidenav" class="sidenav_window">
+                <a class="sidenav_close" id="sidenav_close" href="javascript:sidenav_close();">
+                    <img alt="" src="../resources/images/pop_up/popup_close.png">
+                </a>
+                <div class="sidenav" >
+                    <h3 onclick="location.href='0_main.html'"><img src="../resources/images/main/m_SRMS_logo_w.png" alt="SRMS"> </h3>
+                    <div class="dropdown-btn"><span>권한 신청</span><span class="arrow"></span></div>
+                    <div class="dropdown-container">
+                        <a href="1_1_1_apply.html" class="">S/W VPN 신청</a>
+                        <a href="1_1_2_apply.html" class="">전산장비 네트워크 등록 (NAC)</a>
+                        <a href="1_1_3_apply.html" class="">보안프로그램 아이디 신청 (AD/DRM)</a>
+                    </div>
+                    <div class="dropdown-btn"><span>결재 업무</span><span class="arrow"></span></div>
+                    <div class="dropdown-container" >
+                        <a href="2_1_approval.html" class="">결재할 문서</a>
+                        <a href="2_2_approval.html" class="">결재 진행중 문서</a>
+                        <a href="2_3_approval.html" class="">결재 완료 문서</a>
+                    </div>
+                    <a href="3_1_notice.html" class=""><span>공지사항</span></a>
+                    <a href="4_1_faq.html" class=""><span>FAQ</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- 사이드 메뉴 끝-->
+        <!-- 서브 컨텐츠 -->
+        <div class="sub_content_w">
+            <div class="sub_header">
+                <div class="title pl13">권한 신청</div>
+            </div>
+            <div class="step_wrap">
+                <ul>
+                    <li><span>Step 01.</span><br>권한정보 입력</li>
+                    <li class="on"><span>Step 02.</span><br>사용자 정보 입력</li>
+                    <li><span>Step 03.</span><br>조합 및 신청</li>
+                </ul>
+            </div>
+            <!-- 정보입력 apply_wrap1 -->
+            <div class="apply_wrap1">
+                <!-- 기본정보 입력-->
+                <div class="sub_header_s ">
+                    <p class="title_s fl_l">기본정보</p>
+                </div>        
+                <table class="list_table_no_bg">
+                    <colgroup>
+                        <col style="width:25%;">
+                        <col style="width:75%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>이름</th>
+                            <td>
+                                <div class="search_box"><input type="text" id=""  value="" class="form_control1 we100" ><a class="btn_search" href="javascript:fn_popUp('1')"></a></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>회사명</th>
+                            <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <th>부서명</th>
+                            <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="fc22 f_web mt8">※ 협력사 인원 등록 화면에 등록된 인원만 조회됩니다. 협력사 인원 등록화면에 내용을 등록하고 조회하거나 팝업을 닫고 화면에서 직접 입력해주세요. </p>
+                <!-- 기본정보 입력 끝-->
+                <!-- 계정정보 입력-->
+                <div class="sub_header_s mt30 ">
+                    <p class="title_s fl_l">계정정보</p>
+                </div>        
+                <table class="list_table_no_bg">
+                    <colgroup>
+                        <col style="width:25%;">
+                        <col style="width:75%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>AD 계정</th>
+                            <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 계정정보 입력 끝-->
+                <!-- 개인정보 입력 -->
+                <div class="sub_header_s mt30 ">
+                    <p class="title_s fl_l">개인정보</p>
+                </div>   
+                <table class="list_table_no_bg">
+                    <colgroup>
+                        <col style="width:25%;">
+                        <col style="width:75%;">
+                    </colgroup>
+                    <tbody>                            
+                        <tr>
+                            <th>전화번호</th>
+                            <td>
+                                <select class="we100">
+                                    <option value="" selected="">+82(대한민국)</option>
+                                    <option value=""></option>
+                                </select>
+                                <div class="mt6">
+                                    <input id="" type="text" value="010" class="form_control1 we28 fl_l">
+                                    <span class="unit">-</span>
+                                    <input id="" type="text" value="1234" class="form_control1 we28 fl_l">
+                                    <span class="unit">-</span>
+                                    <input id="" type="text" value="1234" class="form_control1 we28 fl_l">
+                                </div>
+                            </td>
+                        </tr>                       
+                    </tbody>
+                </table>
+                <!-- 개인정보 입력 끝 -->
+                <!-- 장비정보 입력 -->
+                <div class="sub_header_s mt30 ">
+                    <p class="title_s fl_l">장비정보</p>
+                </div>   
+                <table class="list_table_no_bg">
+                    <colgroup>
+                        <col style="width:25%;">
+                        <col style="width:75%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>PC IP</th>
+                            <td>
+                                <select class="we100 fl_l">
+                                    <option value="" selected="">선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PC 사용지역</th>
+                            <td>
+                                <select class="we100 fl_l">
+                                    <option value="" selected="">선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PC 상세지역</th>
+                            <td>
+                                <select class="we100 fl_l">
+                                    <option value="" selected="">선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>PC MAC주소</th>
+                            <td><input type="text" id=""  value="" class="form_control1  we100" placeholder=""></td>
+                        </tr>
+                        <tr>
+                            <th>PC 분류</th>
+                            <td>
+                                <select class="we100 fl_l">
+                                    <option value="" selected="">선택</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 장비정보 입력 끝 -->
+                <!-- 버튼영역 -->
+                <div class="btn_b_wrap">
+                    <div class="btn_b btn_gray mr10">취소</div>
+                    <div class="btn_b btn_color2 "><span class="apply_i_list">목록 담기</span></div>                    
+                </div>
+                <!-- 버튼영역 끝 -->
+            </div>
+            <!-- 정보입력 apply_wrap1 끝-->
+            <!-- 정보입력 apply_wrap2 -->
+            <div class="apply_wrap2">
+                <!-- 테이블영역 -->
+                <div class="sub_header mt30 ">
+                    <p class="title_s fl_l mt5">사용자 목록</p>
+                    <!-- 버튼영역 -->
+                    <div class="fl_r">
+                        <div class="btn_s btn_delete">선택삭제</div>
+                    </div>
+                    <!-- 버튼영역 끝 -->
+                </div>
+                <div class="tab_y_scroll he500">
+                    <ul class="list_table_m">
+                        <li style="border-top: none;" class="on">
+                            <div class="num_box">1</div>
+                            <div class="info_box we85">
+                                <p><span class="type color1">임직원</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">2</div>
+                            <div class="info_box we85">
+                                <p><span class="type color2">협력사</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">3</div>
+                            <div class="info_box we85">
+                                <p><span class="type color2">생산협력사</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">4</div>
+                            <div class="info_box we85">
+                                <p><span class="type color1">임직원</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">5</div>
+                            <div class="info_box we85">
+                                <p><span class="type color2">생산협력사</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">6</div>
+                            <div class="info_box we85">
+                                <p><span class="type color1">임직원</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 테이블영역 끝 -->
+                <!-- 버튼영역 -->
+                <div class="btn_b_wrap">
+                    <div class="btn_b btn_color2 mr10">저장</div>
+                    <div class="btn_b btn_color1" onclick="location.href='1_3_apply.html'"><span class="apply_i_next">다음</span></div>
+                </div>
+                <!-- 버튼영역 끝 -->
+            </div>
+            <!-- 정보입력 apply_wrap2 끝--> 
+        </div>
+        <!-- 서브 컨텐츠 끝 -->                            
+    </div>
+    <!-- 컨텐츠 랩 -->
+    <!-- 직원검색 팝업 -->
+    <div id="popup_mask1" class="popup_mask">
+        <div class="popup_mask_in"></div>
+        <div id="popup1" class="popup_window">
+            <div class="modal-content">
+                <div class="popup_title_wrap">
+                    <p class="popup_title">직원 검색</p>
+                    <a class="popup_close" id="popup_close" href="javascript:fn_close('1');">
+                        <img alt="" src="../resources/images/pop_up/popup_close.png">
+                    </a>
+                </div>
+                <!-- popup_panel -->
+                <div class="popup_panel">
+                    <!-- AP 정보 검색 -->
+                    <table class="sub_sort_table border_t2">
+                        <colgroup>
+                            <col style="width:25%;">
+                                <col style="width:75%;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>부서명</th>
+                                <td>
+                                    <select class="we100">
+                                        <option value="" selected="">선택</option>
+                                        <option value="" ></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>    
+                                <th>이름</th>
+                                <td><input type="text" id=""  class="form_control1 we100"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><div class="btn btn_gray fl_r">조회</div></td>   
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="tab_y_scroll he400">
+                    <ul class="list_table_m">
+                        <li>
+                            <div class="num_box">1</div>
+                            <div class="info_box we85">
+                                <p><span class="type color1">임직원</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">2</div>
+                            <div class="info_box we85">
+                                <p><span class="type color1">임직원</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">3</div>
+                            <div class="info_box we85">
+                                <p><span class="type color1">임직원</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">4</div>
+                            <div class="info_box we85">
+                                <p><span class="type color1">임직원</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">5</div>
+                            <div class="info_box we85">
+                                <p><span class="type color1">임직원</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num_box">6</div>
+                            <div class="info_box we85">
+                                <p><span class="type color1">임직원</span><span class="title">회사명이들어감</span></p>
+                                <p><span class="content team wid1">구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀 구매 시스템 2팀</span></p>
+                                <p><span class="title">직급</span><span class="content">책임 매니저</span><span class="title">이름</span><span class="content">홍길동</span></p>
+                                <p><span class="title">HKMC AD계정</span><span class="content">000000</span></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                    <!-- 직원 검색 끝 -->                        
+                    <div class="popbtns_bottom">
+                        <a href="" class="btn btn_color1 mr10">선택</a>
+                        <a href="javascript:fn_close('1');" class="btn btn_gray pop_close">닫기</a>
+                    </div>
+                </div>
+                <!-- popup_panel 끝--> 
+            </div>
+        </div>
+    </div>
+    <!-- 직원검색 팝업 끝 -->
+    <!-- footer -->
+    <div class="footer_wrap">
+        <div class="footer_menu">
+            <div class="footer_logo">
+                <a href="0_main.html"><img src="../resources/images/main/hyundai.png" alt="HYUNDAI"></a>
+            </div>
+            <p>
+                <span><a href="">공지사항</a></span>
+                <span class="header_line"></span>
+                <span><a href="">FAQ</a></span>
+            </p>
+            <p class="mt10">
+                <span><a href="javascript:fn_popUp('1')">업무담당자 안내 및 문의 </a></span>
+                <span class="header_line"></span>
+                <span><a href="">개인정보 처리방침</a></span>        
+            </p>                
+            <p class="copyright">COPYRIGHT © 2021 HYUNDAI MOTOR GROUP.</p>    
+        </div>
+    </div>
+    <!-- footer end-->
+</div>
+<!-- js -->
+<script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>   
+<script type="text/javascript" src="../resources/js/jquery.blockUI.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.bpopup.min.js"></script> 
+<script type="text/javascript" src="../resources/js/jquery.ui.datepicker.js"></script>
+<script type="text/javascript" src="../resources/js/printThis.js"></script>
+<script type="text/javascript" src="../resources/js/jquery.placeholder.enhanced-1.5.js"></script>
+<script type="text/javascript" src="../resources/js/common.js"></script>
+</body>
+</html>
